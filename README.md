@@ -108,9 +108,11 @@ This is my personal portfolio project which showcases my skills and projects.
 ## 🛠 Key Features <a name="key-features"></a>
 ### Features <a name="key-features"></a>
 
-**Feature1*
-**Feature2*
-**Feature3*
+*Feature1*
+
+*Feature2*
+
+*Feature3*
 
 <p align="right">
 (<a href="#readme-top">back to top</a>)</p>
@@ -210,9 +212,11 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-**Feature1*
-**Feature2*
-**Feature3*
+*Feature1*
+
+*Feature2*
+
+*Feature3*
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
