@@ -43,3 +43,17 @@ jobs:
       - name: Check node_modules existence
         run: |
           if [ -d "node_modules/" ]; then echo -e "\e[1;31mThe node_modules/ folder was pushed to the repo. Please remove it from the GitHub repository and try again."; echo -e "\e[1;32mYou can set up a .gitignore file with this folder included on it to prevent this from happening in the future." && exit 1; fi
+  lighthouse:
+    name: Lighthouse Checks
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "14.x"
+      - name: Install dependencies
+        run: npm install
+      - name: Build the application
+        run: npm run build 
+      - name: Run Lighthouse checks
+        run: npx lighthouse http://localhost:5000 --output json --output-path lighthouse-report.json --chrome-flags="--headless"     
