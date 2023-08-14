@@ -1,0 +1,95 @@
+{
+  "hash": "a09582a6",
+  "browserHash": "3d22c462",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "dc022ee5",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "4124a423",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "680d63b9",
+      "needsInterop": false
+    },
+    "react-bootstrap/Button": {
+      "src": "../../node_modules/react-bootstrap/esm/Button.js",
+      "file": "react-bootstrap_Button.js",
+      "fileHash": "51cf7c57",
+      "needsInterop": false
+    },
+    "react-bootstrap/Container": {
+      "src": "../../node_modules/react-bootstrap/esm/Container.js",
+      "file": "react-bootstrap_Container.js",
+      "fileHash": "6c3a53c6",
+      "needsInterop": false
+    },
+    "react-bootstrap/Form": {
+      "src": "../../node_modules/react-bootstrap/esm/Form.js",
+      "file": "react-bootstrap_Form.js",
+      "fileHash": "8374c53f",
+      "needsInterop": false
+    },
+    "react-bootstrap/Nav": {
+      "src": "../../node_modules/react-bootstrap/esm/Nav.js",
+      "file": "react-bootstrap_Nav.js",
+      "fileHash": "5111d8f4",
+      "needsInterop": false
+    },
+    "react-bootstrap/Navbar": {
+      "src": "../../node_modules/react-bootstrap/esm/Navbar.js",
+      "file": "react-bootstrap_Navbar.js",
+      "fileHash": "7ce70357",
+      "needsInterop": false
+    },
+    "react-bootstrap/NavDropdown": {
+      "src": "../../node_modules/react-bootstrap/esm/NavDropdown.js",
+      "file": "react-bootstrap_NavDropdown.js",
+      "fileHash": "33db42e7",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-NG4ZEJXX": {
+      "file": "chunk-NG4ZEJXX.js"
+    },
+    "chunk-7T6WH3EZ": {
+      "file": "chunk-7T6WH3EZ.js"
+    },
+    "chunk-ZJCBPGVL": {
+      "file": "chunk-ZJCBPGVL.js"
+    },
+    "chunk-GAJTIN5J": {
+      "file": "chunk-GAJTIN5J.js"
+    },
+    "chunk-MVRJAZH5": {
+      "file": "chunk-MVRJAZH5.js"
+    },
+    "chunk-MDIHFEFG": {
+      "file": "chunk-MDIHFEFG.js"
+    },
+    "chunk-QBOERDGK": {
+      "file": "chunk-QBOERDGK.js"
+    },
+    "chunk-GLQYW5T6": {
+      "file": "chunk-GLQYW5T6.js"
+    },
+    "chunk-26J5V33X": {
+      "file": "chunk-26J5V33X.js"
+    },
+    "chunk-WTMQV53C": {
+      "file": "chunk-WTMQV53C.js"
+    },
+    "chunk-L7APZED3": {
+      "file": "chunk-L7APZED3.js"
+    }
+  }
+}
