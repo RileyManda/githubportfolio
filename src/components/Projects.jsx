@@ -29,11 +29,11 @@ const Projects = () => {
             <Col key={index} xs={12} sm={3} md={4} lg={4}>
               <ProjectCard
                 applogo={AppLogo}
-                title={project.title || 'Default Title'}
+                title={project.name}
                 description={project.description || 'Default Description'}
                 demo={project.demo || ''}
-                github={project.topics.join(', ')}
-                techarray={project.techarray || []}
+                github={project.url}
+                techarray={project.topics || []}
               />
             </Col>
           ))}
