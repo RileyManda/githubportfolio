@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="app-logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./src/assets/app-logo.svg" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>RileysPortfolio</b></h3>

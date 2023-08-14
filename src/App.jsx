@@ -1,12 +1,11 @@
-import './App.css'
+import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
-import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Projects from './components/Projects';
 
 function App() {
-
   return (
     <div className="App">
       <BrowserRouter>
@@ -18,7 +17,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -9,9 +9,12 @@ const Home = () => {
         <Col>
       Col1
         </Col>
+        <Col>
+          Col2
+        </Col>
+        
        
       </Row>
-      <h2>Home Page</h2>
     </div>
   );
 };
