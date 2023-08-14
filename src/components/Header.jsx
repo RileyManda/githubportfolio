@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -15,8 +16,13 @@ const Header = () => {
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
             navbarScroll>
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
+            <Link to="/home" className="nav-link">
+              Home
+            </Link>
+            <Link to="/projects" className="nav-link">
+              Projects
+            </Link>
+            <Nav> <Link to="/contact" className="nav-link">Contact</Link></Nav>
             <NavDropdown title="Filter by" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#tech">Tech Stack</NavDropdown.Item>
               <NavDropdown.Item href="#frontend">
