@@ -1,7 +1,17 @@
+import ProjectCard from "./ProjectCard";
+import AppLogo from '../assets/app-logo.svg'
 
-
-export default function Projects() {
+const  Projects = () => {
   return (
-    <div>Projects</div>
-  )
-}
+    <div>
+    <ProjectCard
+        applogo={AppLogo}
+        title="Project 1"
+        description="This is a description of project 1"
+        demo="https"
+        github="icon"
+    />
+    </div>
+  );
+};
+export default Projects;
