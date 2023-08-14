@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -16,25 +16,18 @@ const Header = () => {
             className="me-auto my-2 my-lg-0"
             style={{ maxHeight: '100px' }}
             navbarScroll>
-            <Link to="/home" className="nav-link">
+            <NavLink to="/" className="nav-link">
               Home
-            </Link>
-            <Link to="/projects" className="nav-link">
+            </NavLink>
+            <NavLink to="/projects" className="nav-link">
               Projects
-            </Link>
-            <Nav> <Link to="/contact" className="nav-link">Contact</Link></Nav>
+            </NavLink>
+            <Nav>
+              <NavLink to="/contact" className="nav-link">
+                Contact
+              </NavLink>
+            </Nav>
             <NavDropdown title="Filter by" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#tech">Tech Stack</NavDropdown.Item>
-              <NavDropdown.Item href="#frontend">
-                Front End
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#fullstack">
-                Full Stack
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#date">
-                Date
-              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form className="d-flex">
@@ -51,4 +44,5 @@ const Header = () => {
     </Navbar>
   );
 };
+
 export default Header;
