@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const fetchProjects = createAsyncThunk('projects/fetchProjects', async () => {
     try {
-        const response = await axios.get('https://api.github.com/users/RileyManda/repos');
+        const response = await axios.get('https://api.github.com/users/RileyManda/repos?page=${page}&per_page=100');
         return response.data;
     } catch (error) {
         throw new Error('Failed to fetch projects.');

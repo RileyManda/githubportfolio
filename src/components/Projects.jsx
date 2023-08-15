@@ -21,11 +21,14 @@ const Projects = () => {
     return <div>Loading...</div>;
   }
 
+  const projectsWithTopics = projects.filter(project => project.topics && project.topics.length > 0);
+  // const projectsWithHomepage = projects.filter(project => project.homepage && project.homepage !== '');
+
   return (
     <div>
       <Container>
         <Row xs="auto" className="justify-content-center">
-          {projects.map((project, index) => (
+          {projectsWithTopics.map((project, index) => (
             <Col key={index} xs={12} sm={3} md={4} lg={4}>
               <ProjectCard
                 applogo={AppLogo}
@@ -42,6 +45,5 @@ const Projects = () => {
     </div>
   );
 };
-
 
 export default Projects;
