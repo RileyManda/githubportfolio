@@ -10,11 +10,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
+        <div className="content-container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        </div>
       </BrowserRouter>
     </div>
   );

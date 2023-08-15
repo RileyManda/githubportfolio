@@ -6,10 +6,12 @@ import AppLogo from '../assets/app-logo.svg';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
+import { format } from 'date-fns';
 
 const Projects = () => {
   const projects = useSelector(state => state.home.projects);
   const isLoading = useSelector(state => state.home.isLoading);
+
 
   const dispatch = useDispatch();
 
@@ -23,6 +25,9 @@ const Projects = () => {
 
   const projectsWithTopics = projects.filter(project => project.topics && project.topics.length > 0);
   // const projectsWithHomepage = projects.filter(project => project.homepage && project.homepage !== '');
+  const formatDate = (date) => {
+    return format(new Date(date), 'dd MMM yyyy');
+  };
 
   return (
     <div>
@@ -37,6 +42,7 @@ const Projects = () => {
                 demo={project.demo || ''}
                 github={project.url}
                 techarray={project.topics || []}
+                updated={formatDate(project.updated_at)}
               />
             </Col>
           ))}
