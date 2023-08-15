@@ -2,12 +2,13 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
-import Stack from 'react-bootstrap/Stack';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { faCircleLeft } from '@fortawesome/free-solid-svg-icons';
 import Accordion from 'react-bootstrap/Accordion';
 
-const techColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark'];
+
+const techColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark'];
 
 const ProjectCard = ({ applogo, title, description, demo, github, techarray, created, updated }) => {
 
@@ -24,7 +25,7 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
         <Card.Img variant="top" src={applogo} />
         <Card.Body>
             <Card.Title>{title}</Card.Title>
-                <Accordion defaultActiveKey="0">
+                <Accordion>
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Description</Accordion.Header>
                         <Accordion.Body>
@@ -33,17 +34,16 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
                             </Accordion.Body>
                        </Accordion.Item>
                </Accordion>
-               <div className="badge-container">
-            <Stack direction="vertical" gap={1}>
+                    <div className="badge-container">
                 {techarray.map((tech, index) => (
                     <Badge pill key={index} bg={techColors[index % techColors.length]}>
                         {tech}
                     </Badge>
                 ))}
-            </Stack>
                 </div>
-                <Button variant="outline-info" onClick={handleDemoClick}><FontAwesomeIcon icon={faCircleRight} style={{ color: '#fff' }} /></Button>{' '}
-                <Button variant="outline-info" onClick={handleGithubClick}><FontAwesomeIcon icon={faCircleRight} style={{ color: '#fff' }} /></Button>{' '}
+               
+                <Button variant="info" onClick={handleDemoClick}><FontAwesomeIcon icon={faCircleRight} style={{ color: '#fff' }} /></Button>{' '}
+                <Button variant="info" onClick={handleGithubClick}><FontAwesomeIcon icon={faCircleLeft} style={{ color: '#fff' }} /></Button>{' '}
         </Card.Body>
         <Card.Footer>
             <small className="text-muted">Updated at : {updated}</small>
