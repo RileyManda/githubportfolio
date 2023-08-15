@@ -6,6 +6,7 @@ import AppLogo from '../assets/app-logo.svg';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
+import Stack from 'react-bootstrap/Stack';
 import { format } from 'date-fns';
 
 const Projects = () => {
@@ -32,21 +33,28 @@ const Projects = () => {
   return (
     <div>
       <Container>
-        <Row xs="auto" className="justify-content-center">
+        <Stack gap={3}>
+          <Row xs="auto" className="justify-content-center p-2">
           {projectsWithTopics.map((project, index) => (
-            <Col key={index} xs={12} sm={3} md={4} lg={4}>
+           
+            <Col key={index} xs="auto">
+           
               <ProjectCard
+                created= {formatDate(project.created_at)}
                 applogo={AppLogo}
                 title={project.name}
                 description={project.description || 'Default Description'}
-                demo={project.demo || ''}
-                github={project.url}
+                demo={project.homepage || ''}
+                github={project.html_url}
                 techarray={project.topics || []}
                 updated={formatDate(project.updated_at)}
               />
+           
             </Col>
+        
           ))}
         </Row>
+        </Stack>
       </Container>
     </div>
   );
