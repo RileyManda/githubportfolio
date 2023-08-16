@@ -1,6 +1,7 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+
+:root {
+  --custom-primary-color: #3b80b5;
+  --custom-secondary-color: #5489b1;
 }
 
 .content-container {
@@ -13,4 +14,27 @@
 .badge-container {
   margin-bottom: 20px;
   margin-top: 12px;
+}
+
+.custom-navbar {
+  background-color: var(--custom-primary-color);
+  color: #000;
+}
+
+.custom-navbar .nav-link {
+  color: #fff;
+  font-weight: bold;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #fff;
+}
+
+.tech-stack-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.tech-stack {
+  align-items: center;
 }

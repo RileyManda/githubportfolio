@@ -29,7 +29,7 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
     return (
         <div>
             <Card style={{ width: '18rem', marginBottom: '3rem', height: isAccordionOpen ? 'auto' : '550px' }}
-                border="info">
+                border="warning">
                 <Card.Img variant="top" src={applogo} />
                 <Card.ImgOverlay style={{ height: '250px' }}>
                     <Badge bg="dark" style={{ opacity: '0.8' }}><Card.Title style={{ fontSize: '18px' }}>{title}</Card.Title></Badge>
@@ -37,9 +37,9 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
 
                 <Card.Body>
 
-                    <Accordion>
+                    <Accordion style={{ width: '100%', fontSize: '14px' }}>
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header style={{ fontSize: '8px' }} onClick={toggleAccordion}>Description</Accordion.Header>
+                            <Accordion.Header onClick={toggleAccordion}>About</Accordion.Header>
                             <Accordion.Body>
 
                                 <Card.Text>{description}</Card.Text>
