@@ -27,14 +27,14 @@ const Projects = () => {
   const projectsWithTopics = projects.filter(project => project.topics && project.topics.length > 0);
   // const projectsWithHomepage = projects.filter(project => project.homepage && project.homepage !== '');
   const formatDate = (date) => {
-    return format(new Date(date), 'dd MMM yyyy');
+    return format(new Date(date), 'MMM yyyy');
   };
 
   return (
     <div>
-      <Container>
+      <Container fluid>
         <Stack gap={3}>
-          <Row xs="auto" className="p-2">
+          <Row xs="auto" className="justify-content-center p-2">
           {projectsWithTopics.map((project, index) => (
            
             <Col key={index} xs="auto">

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -6,12 +7,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
 import { faCodeCompare } from '@fortawesome/free-solid-svg-icons';
 import Accordion from 'react-bootstrap/Accordion';
+import Stack from 'react-bootstrap/Stack';
 
 
 const techColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark'];
 
 const ProjectCard = ({ applogo, title, description, demo, github, techarray, created, updated }) => {
-
+    const [isAccordionOpen, setIsAccordionOpen] = useState(false);
     const handleDemoClick = () => {
         window.open(demo, '_blank');
     };
@@ -19,36 +21,54 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
     const handleGithubClick = () => {
         window.open(github, '_blank');
     };
+
+
+    const toggleAccordion = () => {
+        setIsAccordionOpen(!isAccordionOpen);
+    };
     return (
-    <Card style={{ width: '18rem' }} border="info">
-        <Card.Header>Created on: {created}</Card.Header>
+        <div>
+            <Card style={{ width: '18rem', marginBottom: '3rem', height: isAccordionOpen ? 'auto' : '550px' }}
+                border="info">
             <Card.Img variant="top" rounded src={applogo} />
-        <Card.Body>
-            <Card.Title>{title}</Card.Title>
+            <Card.ImgOverlay>
+                    <Badge bg="dark" style={{ opacity: '0.8' }}><Card.Title style={{ fontSize: '18px' }}>{title}</Card.Title></Badge>
+            </Card.ImgOverlay>
+          
+            <Card.Body>
+              
                 <Accordion>
-                    <Accordion.Item eventKey="0">
-                        <Accordion.Header>Description</Accordion.Header>
+                        <Accordion.Item eventKey="0">
+                            <Accordion.Header style={{ fontSize: '8px' }} onClick={toggleAccordion}>Description</Accordion.Header>
                         <Accordion.Body>
                             
-            <Card.Text>{description}</Card.Text>
+                                <Card.Text>{description}</Card.Text>
                             </Accordion.Body>
                        </Accordion.Item>
                </Accordion>
                     <div className="badge-container">
                 {techarray.map((tech, index) => (
-                    <Badge pill key={index} bg={techColors[index % techColors.length]}>
+                    <Badge pill key={index} bg={techColors[index % techColors.length]} style={{ fontSize: '12px' }} >
                         {tech}
                     </Badge>
                 ))}
                 </div>
-               
-                <Button size="sm" variant="info" onClick={handleDemoClick}><FontAwesomeIcon icon={faEye} style={{ color: '#fff' }} /></Button>{' '}
-                <Button size="sm" variant="info" onClick={handleGithubClick}><FontAwesomeIcon icon={faCodeCompare} style={{ color: '#fff' }} /></Button>{' '}
+                
         </Card.Body>
-        <Card.Footer>
-            <small className="text-muted">Updated at : {updated}</small>
+                <Card.Footer bg="dark">
+                    <Stack direction="horizontal" gap={3}>
+                    <Button size="sm" variant="info" onClick={handleDemoClick}><FontAwesomeIcon icon={faEye} style={{ color: '#fff' }} /></Button>{' '}
+                    <Button size="sm" variant="info" onClick={handleGithubClick}><FontAwesomeIcon icon={faCodeCompare} style={{ color: '#fff' }} /></Button>{' '}
+                        <small className="text-muted" style={{ fontSize: '9px', fontWeight: 'bold' }}>Created: {created}</small>
+                        <div className="vr" />
+                        <small className="text-muted" style={{ fontSize: '9px', fontWeight: 'bold' }}>Updated: {updated}</small>
+                      
+                       
+                    </Stack>
         </Card.Footer>
+     
     </Card>
+        </div>
 );
                 };
 ProjectCard.propTypes = {
