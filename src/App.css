@@ -2,3 +2,15 @@
   max-width: 1280px;
   margin: 0 auto;
 }
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 6px auto;
+}
+
+.badge-container {
+  margin-bottom: 20px;
+  margin-top: 12px;
+}
