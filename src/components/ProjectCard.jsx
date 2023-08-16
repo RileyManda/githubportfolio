@@ -30,47 +30,47 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
         <div>
             <Card style={{ width: '18rem', marginBottom: '3rem', height: isAccordionOpen ? 'auto' : '550px' }}
                 border="info">
-            <Card.Img variant="top" rounded src={applogo} />
-            <Card.ImgOverlay>
+                <Card.Img variant="top" src={applogo} />
+                <Card.ImgOverlay>
                     <Badge bg="dark" style={{ opacity: '0.8' }}><Card.Title style={{ fontSize: '18px' }}>{title}</Card.Title></Badge>
-            </Card.ImgOverlay>
-          
-            <Card.Body>
-              
-                <Accordion>
+                </Card.ImgOverlay>
+
+                <Card.Body>
+
+                    <Accordion>
                         <Accordion.Item eventKey="0">
                             <Accordion.Header style={{ fontSize: '8px' }} onClick={toggleAccordion}>Description</Accordion.Header>
-                        <Accordion.Body>
-                            
+                            <Accordion.Body>
+
                                 <Card.Text>{description}</Card.Text>
                             </Accordion.Body>
-                       </Accordion.Item>
-               </Accordion>
+                        </Accordion.Item>
+                    </Accordion>
                     <div className="badge-container">
-                {techarray.map((tech, index) => (
-                    <Badge pill key={index} bg={techColors[index % techColors.length]} style={{ fontSize: '12px' }} >
-                        {tech}
-                    </Badge>
-                ))}
-                </div>
-                
-        </Card.Body>
+                        {techarray.map((tech, index) => (
+                            <Badge pill key={index} bg={techColors[index % techColors.length]} style={{ fontSize: '12px' }} >
+                                {tech}
+                            </Badge>
+                        ))}
+                    </div>
+                  
+                </Card.Body>
                 <Card.Footer bg="dark">
                     <Stack direction="horizontal" gap={3}>
-                    <Button size="sm" variant="info" onClick={handleDemoClick}><FontAwesomeIcon icon={faEye} style={{ color: '#fff' }} /></Button>{' '}
-                    <Button size="sm" variant="info" onClick={handleGithubClick}><FontAwesomeIcon icon={faCodeCompare} style={{ color: '#fff' }} /></Button>{' '}
+                        <Button onClick={handleDemoClick} size="sm" variant="info"><FontAwesomeIcon icon={faEye} style={{ color: '#fff' }} /></Button>
+                        <Button onClick={handleGithubClick} size="sm" variant="info"><FontAwesomeIcon icon={faCodeCompare} style={{ color: '#fff' }} /></Button>
                         <small className="text-muted" style={{ fontSize: '9px', fontWeight: 'bold' }}>Created: {created}</small>
                         <div className="vr" />
                         <small className="text-muted" style={{ fontSize: '9px', fontWeight: 'bold' }}>Updated: {updated}</small>
-                      
-                       
+
+
                     </Stack>
-        </Card.Footer>
-     
-    </Card>
+                </Card.Footer>
+
+            </Card>
         </div>
-);
-                };
+    );
+};
 ProjectCard.propTypes = {
     applogo: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,

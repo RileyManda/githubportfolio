@@ -43,7 +43,7 @@ const Projects = ({ searchKeyword }) => {
                   applogo={AppLogo}
                   title={project.name}
                   description={project.description || 'Default Description'}
-                  demo={project.homepage || ''}
+                  demo={project.homepage}
                   github={project.html_url}
                   techarray={project.topics || []}
                   updated={formatDate(project.updated_at)}
