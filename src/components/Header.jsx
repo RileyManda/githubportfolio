@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -6,7 +7,8 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import SearchField from './SearchField';
 
 
-const Header = () => {
+const Header = ({ setSearchKeyword }) => {
+
   return (
     <Navbar expand="lg" bg="dark" data-bs-theme="dark" sticky="top">
       <Container fluid>
@@ -30,11 +32,13 @@ const Header = () => {
             <NavDropdown title="Filter by" id="navbarScrollingDropdown">
             </NavDropdown>
           </Nav>
-          <SearchField />
+          <SearchField setSearchKeyword={setSearchKeyword} />
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 };
-
+Header.propTypes = {
+  setSearchKeyword: PropTypes.func.isRequired,
+};
 export default Header;

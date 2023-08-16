@@ -1,6 +1,5 @@
 
 import PropTypes from 'prop-types';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 const SearchField = ({ setSearchKeyword }) => {
@@ -20,7 +19,6 @@ const SearchField = ({ setSearchKeyword }) => {
                     aria-label="Search"
                     onChange={handleInputChange}
                 />
-                <Button variant="outline-success">Search</Button>
             </Form>
         </div>
     );
