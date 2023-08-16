@@ -31,7 +31,7 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
             <Card style={{ width: '18rem', marginBottom: '3rem', height: isAccordionOpen ? 'auto' : '550px' }}
                 border="info">
                 <Card.Img variant="top" src={applogo} />
-                <Card.ImgOverlay>
+                <Card.ImgOverlay style={{ height: '250px' }}>
                     <Badge bg="dark" style={{ opacity: '0.8' }}><Card.Title style={{ fontSize: '18px' }}>{title}</Card.Title></Badge>
                 </Card.ImgOverlay>
 
