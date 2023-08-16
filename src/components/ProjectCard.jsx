@@ -3,8 +3,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleRight } from '@fortawesome/free-solid-svg-icons';
-import { faCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faCodeCompare } from '@fortawesome/free-solid-svg-icons';
 import Accordion from 'react-bootstrap/Accordion';
 
 
@@ -22,7 +22,7 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
     return (
     <Card style={{ width: '18rem' }} border="info">
         <Card.Header>Created on: {created}</Card.Header>
-        <Card.Img variant="top" src={applogo} />
+            <Card.Img variant="top" rounded src={applogo} />
         <Card.Body>
             <Card.Title>{title}</Card.Title>
                 <Accordion>
@@ -42,8 +42,8 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
                 ))}
                 </div>
                
-                <Button variant="info" onClick={handleDemoClick}><FontAwesomeIcon icon={faCircleRight} style={{ color: '#fff' }} /></Button>{' '}
-                <Button variant="info" onClick={handleGithubClick}><FontAwesomeIcon icon={faCircleLeft} style={{ color: '#fff' }} /></Button>{' '}
+                <Button size="sm" variant="info" onClick={handleDemoClick}><FontAwesomeIcon icon={faEye} style={{ color: '#fff' }} /></Button>{' '}
+                <Button size="sm" variant="info" onClick={handleGithubClick}><FontAwesomeIcon icon={faCodeCompare} style={{ color: '#fff' }} /></Button>{' '}
         </Card.Body>
         <Card.Footer>
             <small className="text-muted">Updated at : {updated}</small>

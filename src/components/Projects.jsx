@@ -34,7 +34,7 @@ const Projects = () => {
     <div>
       <Container>
         <Stack gap={3}>
-          <Row xs="auto" className="justify-content-center p-2">
+          <Row xs="auto" className="p-2">
           {projectsWithTopics.map((project, index) => (
            
             <Col key={index} xs="auto">
