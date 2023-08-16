@@ -6,6 +6,7 @@ import App1 from '../assets/air-quality.png';
 import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
+import Image from 'react-bootstrap/Image';
 
 const projects = [
     {
@@ -24,7 +25,7 @@ const projects = [
 
 export default function Banner() {
     return (
-        <div>
+        <div className="banner-container">
             <Carousel>
                 {projects.map((project, index) => (
                     <Carousel.Item key={index}>
@@ -33,7 +34,8 @@ export default function Banner() {
                                 <Col>
                                     <Card style={{
                                         width: '100%',
-                                        height: '80%',
+                                        height: '100%',
+                                        border: 'none',
                                     }}>
                                     <h1>I am Riley Manda</h1>
                                     <p>A Full Stack Software Engineer</p>
@@ -48,22 +50,44 @@ export default function Banner() {
 
                                                 </Badge>
                                             ))}
+            
                                     </Stack>
-                                      
+                                        <Stack direction="horizontal" gap={3}>
+                                            <div className="p-2">A</div>
+                                            <div className="p-2">B</div>
+                                            <div className="p-2">C</div>
+                                        </Stack>
                                     </Card>
                                 </Col>
                                 <Col>
-                                    <p>{project.appTitle}</p>
-                                    <img className="d-block w-100" src={project.projectImg} alt={`Slide ${index + 1}`} />
-                                  
+                                    <Card style={{
+                                        width: '100%',
+                                        height: '100%',
+                                        border: 'none',
+                                    }}>
+                                        <Row>
+                                            <Col>
+                                                <p>{project.appTitle}</p>
+                                            </Col>
+
+
+                                            <Col>
+                                                <Image
+                                                    className="d-block w-100"
+                                                     src={project.projectImg}
+                                                      alt={`Slide ${index + 1}`}
+                                                    style={{
+                                                        width: '800px',
+                                                        height: '460px',
+                                                    }}/>
+                                                <p>{project.description}</p>
+                                                </Col>
+                             
+                                        </Row>
+                                  </Card>
                                 </Col>
                             </Row>
                         </Container>
-
-                        <Carousel.Caption>
-                            <h3>{project.appTitle}</h3>
-                            <p>{project.description}</p>
-                        </Carousel.Caption>
                     </Carousel.Item>
                 ))}
             </Carousel>

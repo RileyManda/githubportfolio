@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   margin: 6px auto;
+  height: auto;
 }
 
 .badge-container {
@@ -37,4 +38,8 @@
 
 .tech-stack {
   align-items: center;
+}
+
+.banner-container {
+  height: 100vh;
 }
