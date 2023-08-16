@@ -15,7 +15,7 @@ function App() {
         <div className="content-container">
         <Routes>
           <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects searchKeyword={searchKeyword} />} />
+          <Route path="/projects" element={ <Projects searchKeyword={searchKeyword} />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         </div>
