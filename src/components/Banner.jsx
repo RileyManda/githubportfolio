@@ -50,7 +50,8 @@ export default function Banner() {
                                     <Card style={{
                                       
                                         border: 'none',
-                                        height: '90vh'
+                                        height: '90vh',
+                                       
                                     }}>
                                         <h1>I am Riley Manda</h1>
                                         <p>I am a Full Stack Software Engineer with a passion for building mobile & web applications</p>
@@ -106,24 +107,36 @@ export default function Banner() {
                                         height: '90vh'
                                     }}>
                                         <Row>
+                                         
+                                         
                                             <Col>
-                                                <p>{project.name}</p>
-                                                <Stack direction="vertical" gap={3}>
-                                                    {project.topics.map((tech, index) => (
-                                                        <Badge pill key={index} bg={techColors[index % techColors.length]} style={{ fontSize: '12px' }} >
-                                                            {tech}
-                                                        </Badge>
-                                                    ))}
-                                                </Stack>
-                                            </Col>
 
-
-                                            <Col>
-                                                <p>
-                                                    {project.homepage}
-                                                </p>
+                                
+                                                <p> <b>{project.name}</b></p>
+                                                {project.topics.map((tech, index) => (
+                                                    <Badge pill key={index} bg={techColors[index % techColors.length]} style={{ fontSize: '12px' }} >
+                                                        {tech}
+                                                    </Badge>
+                                                ))}
                                                 <p>{project.description}</p>
+                                             
+
                                             </Col>
+                                 
+                                            <Col md="auto">
+
+                                                <Stack direction="vertical" gap={3}>
+                                                   
+                                                    <iframe
+                                                        title={`Project Preview ${index}`}
+                                                        src={project.homepage}
+                                                        style={{ width: '100%', height: '70vh', border: 'none' }}
+                                                    />
+
+                                                </Stack>
+
+                                            </Col>
+                                           
 
                                         </Row>
                                     </Card>
