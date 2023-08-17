@@ -25,11 +25,6 @@ const Header = ({ setSearchKeyword }) => {
             <NavLink to="/projects" className="nav-link">
               Projects
             </NavLink>
-            <Nav>
-              <NavLink to="/contact" className="nav-link">
-                Contact
-              </NavLink>
-            </Nav>
             <NavDropdown title="Filter by" id="navbarScrollingDropdown">
             </NavDropdown>
           </Nav>
