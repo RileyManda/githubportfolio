@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
-import { faCodeCompare } from '@fortawesome/free-solid-svg-icons';
+import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import Accordion from 'react-bootstrap/Accordion';
 import Stack from 'react-bootstrap/Stack';
 
@@ -57,8 +55,8 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
                 </Card.Body>
                 <Card.Footer bg="dark">
                     <Stack direction="horizontal" gap={3}>
-                        <Button onClick={handleDemoClick} size="sm" variant="info"><FontAwesomeIcon icon={faEye} style={{ color: '#fff' }} /></Button>
-                        <Button onClick={handleGithubClick} size="sm" variant="info"><FontAwesomeIcon icon={faCodeCompare} style={{ color: '#fff' }} /></Button>
+                        <Button onClick={handleDemoClick} size="sm" variant="info"><AiFillEye /></Button>
+                        <Button onClick={handleGithubClick} size="sm" variant="info"><AiFillGithub /></Button>
                         <small className="text-muted" style={{ fontSize: '9px', fontWeight: 'bold' }}>Created: {created}</small>
                         <div className="vr" />
                         <small className="text-muted" style={{ fontSize: '9px', fontWeight: 'bold' }}>Updated: {updated}</small>
