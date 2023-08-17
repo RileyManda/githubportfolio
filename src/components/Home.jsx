@@ -1,22 +1,11 @@
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-
+import Banner from './Banner';
 
 const Home = () => {
-  return (
-    <div>
-      <Row>
-        <Col>
-      Col1
-        </Col>
-        <Col>
-          Col2
-        </Col>
-        
-       
-      </Row>
-    </div>
-  );
+return (
+  <div>
+    <Banner />
+  </div>
+);
 };
 
 export default Home;

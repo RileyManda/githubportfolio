@@ -10,12 +10,13 @@ import SearchField from './SearchField';
 const Header = ({ setSearchKeyword }) => {
 
   return (
-    <Navbar expand="lg" bg="dark" data-bs-theme="dark" sticky="top">
+    <Navbar expand="lg" sticky="top" className="custom-navbar">
       <Container fluid>
-        <Navbar.Brand href="#">RileyManda</Navbar.Brand>
+        <Navbar.Brand href="/" style={{ color: '#fff' }}>RileyManda</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
-            className="me-auto my-2 my-lg-0"
+            className="me-auto"
             style={{ maxHeight: '100px' }}
             navbarScroll>
             <NavLink to="/" className="nav-link">
@@ -24,11 +25,6 @@ const Header = ({ setSearchKeyword }) => {
             <NavLink to="/projects" className="nav-link">
               Projects
             </NavLink>
-            <Nav>
-              <NavLink to="/contact" className="nav-link">
-                Contact
-              </NavLink>
-            </Nav>
             <NavDropdown title="Filter by" id="navbarScrollingDropdown">
             </NavDropdown>
           </Nav>

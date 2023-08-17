@@ -1,15 +1,20 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-
 export const fetchProjects = createAsyncThunk('projects/fetchProjects', async () => {
     try {
-        const response = await axios.get('https://api.github.com/users/RileyManda/repos?page=${page}&per_page=100');
+        const accessToken = import.meta.env.VITE_GIT_TOKEN;
+        const response = await axios.get(`https://api.github.com/users/RileyManda/repos?page=1&per_page=100`,{
+            headers: {
+                Authorization: `Bearer ${accessToken}`,
+            },
+        });
         return response.data;
     } catch (error) {
         throw new Error('Failed to fetch projects.');
     }
 });
+
 
 const initialState = {
     projects: [],

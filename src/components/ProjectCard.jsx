@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
-import { faCodeCompare } from '@fortawesome/free-solid-svg-icons';
+import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import Accordion from 'react-bootstrap/Accordion';
 import Stack from 'react-bootstrap/Stack';
 
@@ -29,48 +27,48 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
     return (
         <div>
             <Card style={{ width: '18rem', marginBottom: '3rem', height: isAccordionOpen ? 'auto' : '550px' }}
-                border="info">
-            <Card.Img variant="top" rounded src={applogo} />
-            <Card.ImgOverlay>
+                border="warning">
+                <Card.Img variant="top" src={applogo} />
+                <Card.ImgOverlay style={{ height: '250px' }}>
                     <Badge bg="dark" style={{ opacity: '0.8' }}><Card.Title style={{ fontSize: '18px' }}>{title}</Card.Title></Badge>
-            </Card.ImgOverlay>
-          
-            <Card.Body>
-              
-                <Accordion>
+                </Card.ImgOverlay>
+
+                <Card.Body>
+
+                    <Accordion style={{ width: '100%', fontSize: '14px' }}>
                         <Accordion.Item eventKey="0">
-                            <Accordion.Header style={{ fontSize: '8px' }} onClick={toggleAccordion}>Description</Accordion.Header>
-                        <Accordion.Body>
-                            
+                            <Accordion.Header onClick={toggleAccordion}>About</Accordion.Header>
+                            <Accordion.Body>
+
                                 <Card.Text>{description}</Card.Text>
                             </Accordion.Body>
-                       </Accordion.Item>
-               </Accordion>
+                        </Accordion.Item>
+                    </Accordion>
                     <div className="badge-container">
-                {techarray.map((tech, index) => (
-                    <Badge pill key={index} bg={techColors[index % techColors.length]} style={{ fontSize: '12px' }} >
-                        {tech}
-                    </Badge>
-                ))}
-                </div>
-                
-        </Card.Body>
+                        {techarray.map((tech, index) => (
+                            <Badge pill key={index} bg={techColors[index % techColors.length]} style={{ fontSize: '12px' }} >
+                                {tech}
+                            </Badge>
+                        ))}
+                    </div>
+                  
+                </Card.Body>
                 <Card.Footer bg="dark">
                     <Stack direction="horizontal" gap={3}>
-                    <Button size="sm" variant="info" onClick={handleDemoClick}><FontAwesomeIcon icon={faEye} style={{ color: '#fff' }} /></Button>{' '}
-                    <Button size="sm" variant="info" onClick={handleGithubClick}><FontAwesomeIcon icon={faCodeCompare} style={{ color: '#fff' }} /></Button>{' '}
+                        <Button onClick={handleDemoClick} size="sm" variant="info"><AiFillEye /></Button>
+                        <Button onClick={handleGithubClick} size="sm" variant="info"><AiFillGithub /></Button>
                         <small className="text-muted" style={{ fontSize: '9px', fontWeight: 'bold' }}>Created: {created}</small>
                         <div className="vr" />
                         <small className="text-muted" style={{ fontSize: '9px', fontWeight: 'bold' }}>Updated: {updated}</small>
-                      
-                       
+
+
                     </Stack>
-        </Card.Footer>
-     
-    </Card>
+                </Card.Footer>
+
+            </Card>
         </div>
-);
-                };
+    );
+};
 ProjectCard.propTypes = {
     applogo: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
