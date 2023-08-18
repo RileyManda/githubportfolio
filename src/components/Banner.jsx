@@ -9,6 +9,7 @@ import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
 import { ProgrammingIcons, FrontendIcons, BackendIcons, FrameworkIcons, EditorIcons } from './Icons';
+import { orangeIconStyles, blueIconStyles, purpleIconStyles, greenIconStyles, redIconStyles } from './IconColor';
 
 
 export default function Banner() {
@@ -28,10 +29,6 @@ export default function Banner() {
     const projectsWithTopics = projects.filter(project =>
         project.topics && project.topics.length > 0);
 
-    const whiteIconStyles = {
-        color: 'orange',
-        fontSize: '30px',
-    };
 
     return (
         <div className="banner-container" style={{ width: '100%', height: '90vh' }}>
@@ -52,31 +49,31 @@ export default function Banner() {
                                                 <Badge pill bg="dark">Programming languages</Badge>
                                                 {ProgrammingIcons.map((icon, index) => (
                                                     <div key={index} className="p-2 white-icon">
-                                                        {icon.icon({ style: whiteIconStyles, title: icon.label })}
+                                                        {icon.icon({ style: orangeIconStyles, title: icon.label })}
                                                     </div>
                                                 ))}
                                             </Stack>
                                             <Stack direction="horizontal" gap={3}>
-                                                <Badge pill bg="dark">Programming languages</Badge>
+                                                <Badge pill bg="dark">Front-end</Badge>
                                                 {FrontendIcons.map((icon, index) => (
                                                     <div key={index} className="p-2 white-icon">
-                                                        {icon.icon({ style: whiteIconStyles, title: icon.label })}
+                                                        {icon.icon({ style: blueIconStyles, title: icon.label })}
                                                     </div>
                                                 ))}
                                             </Stack>
                                             <Stack direction="horizontal" gap={3}>
-                                                <Badge pill bg="dark">Programming languages</Badge>
+                                                <Badge pill bg="dark">Back-end</Badge>
                                                 {BackendIcons.map((icon, index) => (
                                                     <div key={index} className="p-2 white-icon">
-                                                        <icon.icon style={whiteIconStyles} title={icon.label} />
+                                                        {icon.icon({ style: purpleIconStyles, title: icon.label })}
                                                     </div>
                                                 ))}
                                             </Stack>
                                             <Stack direction="horizontal" gap={3}>
-                                                <Badge pill bg="dark">Programming languages</Badge>
+                                                <Badge pill bg="dark">Frameworks</Badge>
                                                 {FrameworkIcons.map((icon, index) => (
                                                     <div key={index} className="p-2 white-icon">
-                                                        <icon.icon style={whiteIconStyles} title={icon.label} />
+                                                        <icon.icon style={greenIconStyles} title={icon.label} />
                                                     </div>
                                                 ))}
                                             </Stack>
@@ -84,7 +81,7 @@ export default function Banner() {
                                                 <Badge pill bg="dark">IDEs</Badge>
                                                 {EditorIcons.map((icon, index) => (
                                                     <div key={index} className="p-2 white-icon">
-                                                        <icon.icon style={whiteIconStyles} title={icon.label} />
+                                                        <icon.icon style={redIconStyles} title={icon.label} />
                                                     </div>
                                                 ))}
                                             </Stack>
@@ -107,11 +104,12 @@ export default function Banner() {
                                                 <p>{project.description}</p>
                                             </Col>
                                             <Col md="auto">
-                                                <Stack direction="vertical" gap={3}>
+                                                <Stack direction="vertical" gap={2}>
                                                     <iframe
+                                                        display="block"
                                                         title={`Project Preview ${index}`}
                                                         src={project.homepage}
-                                                        style={{ width: '100%', height: '70vh', border: 'none' }}
+                                                        style={{ width: '300px', height: '70vh', border: 'none' }}
                                                     />
                                                 </Stack>
                                             </Col>

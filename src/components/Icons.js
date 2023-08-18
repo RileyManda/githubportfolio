@@ -7,7 +7,6 @@ import { FaJava, FaBootstrap, FaSass } from 'react-icons/fa';
 import { AiFillHtml5 } from 'react-icons/ai';
 import { TbBrandVscode } from 'react-icons/tb';
 
-
 export const ProgrammingIcons = [
     { icon: DiJavascript, label: 'javaScript' },
     { icon: FaJava, label: 'java' },
