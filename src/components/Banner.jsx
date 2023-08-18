@@ -8,18 +8,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
-import { FaReact, FaNodeJs } from 'react-icons/fa';
-import { AiFillGithub } from 'react-icons/ai';
-import { SiMui } from 'react-icons/si';
-import { DiRuby, DiJavascript } from 'react-icons/di';
-import { BiLogoPostgresql, BiLogoTailwindCss, BiLogoCss3 } from 'react-icons/bi';
-import { SiPython, SiWebpack, SiAndroidstudio } from 'react-icons/si';
-import { FiFigma } from 'react-icons/fi';
-import { FaJava, FaBootstrap } from 'react-icons/fa';
-import { AiFillHtml5 } from 'react-icons/ai';
-import { FaSass } from 'react-icons/fa';
-import { TbBrandVscode } from 'react-icons/tb';
-
+import { ProgrammingIcons, FrontendIcons, BackendIcons, FrameworkIcons, EditorIcons } from './Icons';
 
 
 export default function Banner() {
@@ -39,6 +28,11 @@ export default function Banner() {
     const projectsWithTopics = projects.filter(project =>
         project.topics && project.topics.length > 0);
 
+    const whiteIconStyles = {
+        color: 'orange',
+        fontSize: '30px',
+    };
+
     return (
         <div className="banner-container" style={{ width: '100%', height: '90vh' }}>
             <Carousel data-bs-theme="dark">
@@ -48,70 +42,62 @@ export default function Banner() {
                             <Row>
                                 <Col>
                                     <Card style={{
-                                      
                                         border: 'none',
                                         height: '90vh',
-                                       
                                     }}>
                                         <h1>I am Riley Manda</h1>
-                                        <p>I am a Full Stack Software Engineer with a passion for building mobile & web applications</p>
+                                        <p>A Full Stack Software Engineer with a passion for building mobile & web applications</p>
                                         <Stack gap={3}>
-                                        <Stack direction="horizontal" gap={3}>
+                                            <Stack direction="horizontal" gap={3}>
                                                 <Badge pill bg="dark">Programming languages</Badge>
-                                            <div className="p-2"><DiJavascript /></div>
-                                            <div className="p-2"><FaJava /></div>
-                                            <div className="p-2"><SiPython /></div>
+                                                {ProgrammingIcons.map((icon, index) => (
+                                                    <div key={index} className="p-2 white-icon">
+                                                        {icon.icon({ style: whiteIconStyles, title: icon.label })}
+                                                    </div>
+                                                ))}
                                             </Stack>
                                             <Stack direction="horizontal" gap={3}>
-                                                <Badge pill bg="dark">Front-end</Badge>
-                                            <div className="p-2"><FaReact /></div>
-                                            <div className="p-2"><FaBootstrap /></div>     
-                                            <div className="p-2"><SiMui /></div>
-                                            <div className="p-2"><SiWebpack /></div>
-                                            <div className="p-2"><BiLogoTailwindCss /></div>
-                                            <div className="p-2"><AiFillHtml5 /></div>
-                                            <div className="p-2"><BiLogoCss3 /></div>
-                                            <div className="p-2"><FaSass /></div>
-                                            </Stack>
-
-                                            <Stack direction="horizontal" gap={3}>
-                                                <Badge pill bg="dark">Backend</Badge>
-                                            <div className="p-2"><FaNodeJs /></div>
-                                            <div className="p-2"><DiRuby /></div>
-                                            <div className="p-2"><BiLogoPostgresql /></div>
+                                                <Badge pill bg="dark">Programming languages</Badge>
+                                                {FrontendIcons.map((icon, index) => (
+                                                    <div key={index} className="p-2 white-icon">
+                                                        {icon.icon({ style: whiteIconStyles, title: icon.label })}
+                                                    </div>
+                                                ))}
                                             </Stack>
                                             <Stack direction="horizontal" gap={3}>
-                                                <Badge pill bg="dark">UX Design</Badge>
-                                            <div className="p-2"><FiFigma /></div>
+                                                <Badge pill bg="dark">Programming languages</Badge>
+                                                {BackendIcons.map((icon, index) => (
+                                                    <div key={index} className="p-2 white-icon">
+                                                        <icon.icon style={whiteIconStyles} title={icon.label} />
+                                                    </div>
+                                                ))}
                                             </Stack>
                                             <Stack direction="horizontal" gap={3}>
-                                                <Badge pill bg="dark">Version control</Badge>
-                                            <div className="p-2"><AiFillGithub /></div>
-                                           
+                                                <Badge pill bg="dark">Programming languages</Badge>
+                                                {FrameworkIcons.map((icon, index) => (
+                                                    <div key={index} className="p-2 white-icon">
+                                                        <icon.icon style={whiteIconStyles} title={icon.label} />
+                                                    </div>
+                                                ))}
                                             </Stack>
                                             <Stack direction="horizontal" gap={3}>
-                                                <Badge pill bg="dark">Editors</Badge>
-                                                <div className="p-2"><TbBrandVscode /></div>
-                                                <div className="p-2"><SiAndroidstudio /></div>
-                                                
-
+                                                <Badge pill bg="dark">IDEs</Badge>
+                                                {EditorIcons.map((icon, index) => (
+                                                    <div key={index} className="p-2 white-icon">
+                                                        <icon.icon style={whiteIconStyles} title={icon.label} />
+                                                    </div>
+                                                ))}
                                             </Stack>
                                         </Stack>
-                                 
                                     </Card>
                                 </Col>
                                 <Col>
                                     <Card style={{
-                                       
                                         border: 'none',
                                         height: '90vh'
                                     }}>
                                         <Row>
-                                         
-                                         
                                             <Col>
-
-                                
                                                 <p> <b>{project.name}</b></p>
                                                 {project.topics.map((tech, index) => (
                                                     <Badge pill key={index} bg={techColors[index % techColors.length]} style={{ fontSize: '12px' }} >
@@ -119,25 +105,16 @@ export default function Banner() {
                                                     </Badge>
                                                 ))}
                                                 <p>{project.description}</p>
-                                             
-
                                             </Col>
-                                 
                                             <Col md="auto">
-
                                                 <Stack direction="vertical" gap={3}>
-                                                   
                                                     <iframe
                                                         title={`Project Preview ${index}`}
                                                         src={project.homepage}
                                                         style={{ width: '100%', height: '70vh', border: 'none' }}
                                                     />
-
                                                 </Stack>
-
                                             </Col>
-                                           
-
                                         </Row>
                                     </Card>
                                 </Col>
