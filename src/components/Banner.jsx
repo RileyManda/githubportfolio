@@ -37,7 +37,7 @@ export default function Banner() {
                     <Carousel.Item key={index} data-bs-theme="light">
                         <Container className="column-container">
                             <Row>
-                                <Col className="col-1">
+                                <Col className="column-1">
                                     <Card style={{
                                         border: 'none',
                                         height: '90vh',
@@ -88,7 +88,7 @@ export default function Banner() {
                                         </Stack>
                                     </Card>
                                 </Col>
-                                <Col className="col-2">
+                                <Col className="column-2">
                                     <Card style={{
                                         border: 'none',
                                         height: '90vh',
@@ -96,8 +96,8 @@ export default function Banner() {
                                     }}>
                                         <Row>
                                             <Col sm={1} lg={1} md={1}>
-                                               
-                                               
+
+
                                             </Col>
                                             <Col>
                                                 <Stack direction="vertical" gap={2}>
@@ -108,19 +108,19 @@ export default function Banner() {
                                                             style={{ width: '100%', height: '80vh', border: 'solid orange' }}
                                                         />
                                                         <div className="overlay">
-                                                        <div className="overlay-content">
+                                                            <div className="overlay-content">
                                                                 <p className="project-title">{project.name}</p>
                                                                 <p className="project-description"><b>{project.description}</b></p>
                                                                 {project.topics.map((tech, index) => (
                                                                     <Stack direction="vertical" gap={1} key={index}>
-                                                                        <Badge pill bg={techColors[index % techColors.length]} style={{ fontSize: '12px', width:'200px', }} >
+                                                                        <Badge pill bg={techColors[index % techColors.length]} style={{ fontSize: '12px', width: '200px', }} >
                                                                             {tech}
                                                                         </Badge>
                                                                     </Stack>
 
                                                                 ))}
-                                                        </div>
-                                                           
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </Stack>
