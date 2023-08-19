@@ -32,12 +32,12 @@ export default function Banner() {
 
     return (
         <div className="banner-container" style={{ width: '100%', height: '90vh' }}>
-            <Carousel data-bs-theme="dark">
+            <Carousel data-bs-theme="dark" className="carousel-container">
                 {projectsWithTopics.map((project, index) => (
                     <Carousel.Item key={index} data-bs-theme="light">
-                        <Container>
+                        <Container className="column-container">
                             <Row>
-                                <Col>
+                                <Col className="col-1">
                                     <Card style={{
                                         border: 'none',
                                         height: '90vh',
@@ -88,29 +88,41 @@ export default function Banner() {
                                         </Stack>
                                     </Card>
                                 </Col>
-                                <Col>
+                                <Col className="col-2">
                                     <Card style={{
                                         border: 'none',
-                                        height: '90vh'
+                                        height: '90vh',
+                                        width: '100%',
                                     }}>
                                         <Row>
-                                            <Col>
-                                                <p> <b>{project.name}</b></p>
-                                                {project.topics.map((tech, index) => (
-                                                    <Badge pill key={index} bg={techColors[index % techColors.length]} style={{ fontSize: '12px' }} >
-                                                        {tech}
-                                                    </Badge>
-                                                ))}
-                                                <p>{project.description}</p>
+                                            <Col sm={1} lg={1} md={1}>
+                                               
+                                               
                                             </Col>
-                                            <Col md="auto">
+                                            <Col>
                                                 <Stack direction="vertical" gap={2}>
-                                                    <iframe
-                                                        display="block"
-                                                        title={`Project Preview ${index}`}
-                                                        src={project.homepage}
-                                                        style={{ width: '300px', height: '70vh', border: 'none' }}
-                                                    />
+                                                    <div className="iframe-container">
+                                                        <iframe
+                                                            title={`Project Preview ${index}`}
+                                                            src={project.homepage}
+                                                            style={{ width: '100%', height: '80vh', border: 'solid orange' }}
+                                                        />
+                                                        <div className="overlay">
+                                                        <div className="overlay-content">
+                                                                <p className="project-title">{project.name}</p>
+                                                                <p className="project-description"><b>{project.description}</b></p>
+                                                                {project.topics.map((tech, index) => (
+                                                                    <Stack direction="vertical" gap={1} key={index}>
+                                                                        <Badge pill bg={techColors[index % techColors.length]} style={{ fontSize: '12px', width:'200px', }} >
+                                                                            {tech}
+                                                                        </Badge>
+                                                                    </Stack>
+
+                                                                ))}
+                                                        </div>
+                                                           
+                                                        </div>
+                                                    </div>
                                                 </Stack>
                                             </Col>
                                         </Row>
