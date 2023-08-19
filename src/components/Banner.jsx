@@ -105,7 +105,7 @@ export default function Banner() {
                                                         <iframe
                                                             title={`Project Preview ${index}`}
                                                             src={project.homepage}
-                                                            style={{ width: '100%', height: '80vh', border: 'solid orange' }}
+                                                            style={{ width: '100%', height: '80vh', border: 'solid #FFA000' }}
                                                         />
                                                         <div className="overlay">
                                                             <div className="overlay-content">
