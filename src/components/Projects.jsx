@@ -8,6 +8,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
+import Loader from './Loader';
 import { format } from 'date-fns';
 
 const Projects = ({ searchKeyword }) => {
@@ -21,7 +22,7 @@ const Projects = ({ searchKeyword }) => {
   }, [dispatch]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div><Loader /></div>;
   }
 
   const projectsWithTopics = projects.filter(project =>
