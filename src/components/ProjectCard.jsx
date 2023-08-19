@@ -7,7 +7,6 @@ import { AiFillEye, AiFillGithub } from 'react-icons/ai';
 import Accordion from 'react-bootstrap/Accordion';
 import Stack from 'react-bootstrap/Stack';
 
-
 const techColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark'];
 
 const ProjectCard = ({ applogo, title, description, demo, github, techarray, created, updated }) => {

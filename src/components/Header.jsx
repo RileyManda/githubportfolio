@@ -10,7 +10,7 @@ import SearchField from './SearchField';
 const Header = ({ setSearchKeyword }) => {
 
   return (
-    <Navbar expand="lg" sticky="top" className="custom-navbar">
+    <Navbar expand="lg" sticky="top" data-bs-theme="dark" className="custom-navbar">
       <Container fluid>
         <Navbar.Brand href="/" style={{ color: '#fff' }}>RileyManda</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
