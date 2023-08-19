@@ -2,6 +2,7 @@
 :root {
   --custom-primary-color: #1c2331;
   --custom-secondary-color: #5489b1;
+  --active-color: #ffa500;
 }
 
 .content-container {
@@ -19,16 +20,10 @@
 
 .custom-navbar {
   background-color: var(--custom-primary-color);
-  color: #fff;
 }
 
 .custom-navbar .nav-link {
-  color: #fff;
-  font-weight: bold;
-}
-
-.custom-navbar .nav-link:hover {
-  color: orange;
+  color: #ffa500;
 }
 
 .tech-stack-container {
