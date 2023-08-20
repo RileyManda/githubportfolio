@@ -8,6 +8,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
+import Loader from './Loader';
 import { ProgrammingIcons, FrontendIcons, BackendIcons, FrameworkIcons, EditorIcons } from './Icons';
 import { orangeIconStyles, blueIconStyles, purpleIconStyles, greenIconStyles, redIconStyles } from './IconColor';
 
@@ -23,7 +24,7 @@ export default function Banner() {
     }, [dispatch]);
 
     if (isLoading) {
-        return <div>Loading...</div>;
+        return <div><Loader /></div>;
     }
 
     const projectsWithTopics = projects.filter(project =>

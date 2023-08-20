@@ -94,6 +94,14 @@
   text-align: center;
 }
 
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--custom-primary-color);
+}
+
 /* media queries */
 @media (max-width: 375px) {
   .project-description {
