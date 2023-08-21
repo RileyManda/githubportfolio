@@ -10,8 +10,9 @@ import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
 import Loader from './Loader';
 import { format } from 'date-fns';
+import SearchField from './SearchField';
 
-const Projects = ({ searchKeyword }) => {
+const Projects = ({ setSearchKeyword, searchKeyword }) => {
   const projects = useSelector(state => state.home.projects);
   const isLoading = useSelector(state => state.home.isLoading);
 
@@ -35,6 +36,7 @@ const Projects = ({ searchKeyword }) => {
   return (
     <div>
       <Container fluid>
+        <SearchField setSearchKeyword={setSearchKeyword} />
         <Stack gap={3}>
           <Row xs="auto" className="justify-content-center p-2">
             {projectsWithTopics.map((project, index) => (
@@ -59,6 +61,7 @@ const Projects = ({ searchKeyword }) => {
 };
 
 Projects.propTypes = {
+  setSearchKeyword: PropTypes.func.isRequired,
   searchKeyword: PropTypes.string.isRequired,
 };
 
