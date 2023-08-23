@@ -3,6 +3,16 @@
   --custom-secondary-color: #2e3a51;
   --active-color: #ffa000;
   --white-font-color: #fff;
+
+  /* timeline psudo values */
+
+  --year-font-size: 2px;
+  --year-text-color: #aa3232;
+  --timeline-item-bg-color: #f1f1f1;
+  --timeline-item-text-color: inherit;
+  --timeline-item-font-size: 12px;
+  --timeline-item-padding: 4px 8px;
+  --timeline-item-border-radius: 4px;
 }
 
 /* content */
@@ -127,4 +137,17 @@
   .column-2 {
     width: 100%;
   }
+}
+
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.summary-container {
+  width: 100%;
 }
