@@ -3,11 +3,11 @@ import axios from 'axios';
 
 export const fetchProjects = createAsyncThunk('projects/fetchProjects', async () => {
     try {
-        const accessToken = import.meta.env.VITE_GIT_TOKEN;
+        // const accessToken = import.meta.env.VITE_GIT_TOKEN;
         const response = await axios.get(`https://api.github.com/users/RileyManda/repos?page=1&per_page=100`,{
-            headers: {
-                Authorization: `Bearer ${accessToken}`,
-            },
+            // headers: {
+            //     Authorization: `Bearer ${accessToken}`,
+            // },
         });
         return response.data;
     } catch (error) {
