@@ -11,9 +11,13 @@ import Stack from 'react-bootstrap/Stack';
 import Loader from './Loader';
 import { ProgrammingIcons, FrontendIcons, BackendIcons, FrameworkIcons, EditorIcons } from './Icons';
 import { orangeIconStyles, blueIconStyles, purpleIconStyles, greenIconStyles, redIconStyles } from './IconColor';
-import CodersrankTimeline from '@codersrank/timeline';
+import CodersRankSkillsChart from '@codersrank/skills-chart';
+import CodersrankSummary from '@codersrank/summary';
 
-window.customElements.define('codersrank-timeline', CodersrankTimeline);
+// register web component as <codersrank-summary> element
+window.customElements.define('codersrank-summary', CodersrankSummary);
+// register web component as <codersrank-skills-chart> element
+window.customElements.define('codersrank-skills-chart', CodersRankSkillsChart);
 
 export default function Banner() {
     const projects = useSelector(state => state.home.projects);
@@ -104,10 +108,7 @@ export default function Banner() {
                                             </Col>
                                             <Col>
                                                 <Stack direction="vertical" gap={2}>
-                                                    <div className="iframe-container">
-                                                       
-                                                        <codersrank-timeline type="technologies" username="rileymanda"></codersrank-timeline>
-                                                    </div>
+                                                <codersrank-skills-chart labels="true" legend="true" username="rileymanda"></codersrank-skills-chart>
                                                 </Stack>
                                             </Col>
                                         </Row>
