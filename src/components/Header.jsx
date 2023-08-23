@@ -1,40 +1,34 @@
-import { NavLink } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import SearchField from './SearchField';
+import PropTypes from 'prop-types';
+import Nav from 'react-bootstrap/Nav';
 
-
-const Header = ({ setSearchKeyword }) => {
+const Header = ({ homeRef, projectsRef }) => {
+  const scrollToRef = (ref) => {
+    if (ref.current) {
+      window.scrollTo({ top: ref.current.offsetTop - 100, behavior: 'smooth' });
+    }
+  };
 
   return (
-    <Navbar expand="lg" sticky="top" data-bs-theme="dark" className="custom-navbar">
+    <Navbar expand="lg" sticky="top" bg="dark" variant="dark" className="custom-navbar">
       <Container fluid>
-        <Navbar.Brand href="/" style={{ color: '#fff' }}>RileyManda</Navbar.Brand>
+        <Navbar.Brand href="/" style={{ color: '#fff' }}>
+          RileyManda
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto"
-            style={{ maxHeight: '100px' }}
-            navbarScroll>
-            <NavLink to="/" className="nav-link">
-              Home
-            </NavLink>
-            <NavLink to="/projects" className="nav-link">
-              Projects
-            </NavLink>
-            <NavDropdown title="Filter by" id="navbarScrollingDropdown">
-            </NavDropdown>
+          <Nav className="me-auto" style={{ maxHeight: '100px' }} navbarScroll>
+            <Nav.Link onClick={() => scrollToRef(homeRef)}>Home</Nav.Link>
+            <Nav.Link onClick={() => scrollToRef(projectsRef)}>Projects</Nav.Link>
           </Nav>
-          <SearchField setSearchKeyword={setSearchKeyword} />
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 };
 Header.propTypes = {
-  setSearchKeyword: PropTypes.func.isRequired,
+  homeRef: PropTypes.object.isRequired,
+  projectsRef: PropTypes.object.isRequired,
 };
 export default Header;
