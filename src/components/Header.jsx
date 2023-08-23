@@ -1,12 +1,17 @@
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-scroll'; 
+import PropTypes from 'prop-types';
+import Nav from 'react-bootstrap/Nav';
 
-const Header = () => {
+const Header = ({ homeRef, projectsRef }) => {
+  const scrollToRef = (ref) => {
+    if (ref.current) {
+      window.scrollTo({ top: ref.current.offsetTop - 100, behavior: 'smooth' });
+    }
+  };
+
   return (
-    <Navbar expand="lg" sticky="top" data-bs-theme="dark" bg="dark" className="custom-navbar">
+    <Navbar expand="lg" sticky="top" bg="dark" variant="dark" className="custom-navbar">
       <Container fluid>
         <Navbar.Brand href="/" style={{ color: '#fff' }}>
           RileyManda
@@ -14,23 +19,16 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto" style={{ maxHeight: '100px' }} navbarScroll>
-            <Nav.Link>
-              <Link to="home" smooth={true} duration={500} offset={-100}>
-                Home
-              </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="projects" smooth={true} duration={500} offset={-100}>
-                Projects
-              </Link>
-            </Nav.Link>
-            <NavDropdown title="Filter by" id="navbarScrollingDropdown">
-            </NavDropdown>
+            <Nav.Link onClick={() => scrollToRef(homeRef)}>Home</Nav.Link>
+            <Nav.Link onClick={() => scrollToRef(projectsRef)}>Projects</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 };
-
+Header.propTypes = {
+  homeRef: PropTypes.object.isRequired,
+  projectsRef: PropTypes.object.isRequired,
+};
 export default Header;

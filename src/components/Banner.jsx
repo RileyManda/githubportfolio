@@ -11,13 +11,15 @@ import Stack from 'react-bootstrap/Stack';
 import Loader from './Loader';
 import { ProgrammingIcons, FrontendIcons, BackendIcons, FrameworkIcons, EditorIcons } from './Icons';
 import { orangeIconStyles, blueIconStyles, purpleIconStyles, greenIconStyles, redIconStyles } from './IconColor';
+import CodersrankTimeline from '@codersrank/timeline';
 
+window.customElements.define('codersrank-timeline', CodersrankTimeline);
 
 export default function Banner() {
     const projects = useSelector(state => state.home.projects);
     const isLoading = useSelector(state => state.home.isLoading);
     const dispatch = useDispatch();
-    const techColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark'];
+    // const techColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark'];
 
     useMemo(() => {
         dispatch(fetchProjects());
@@ -103,26 +105,8 @@ export default function Banner() {
                                             <Col>
                                                 <Stack direction="vertical" gap={2}>
                                                     <div className="iframe-container">
-                                                        <iframe
-                                                            title={`Project Preview ${index}`}
-                                                            src={project.homepage}
-                                                            style={{ width: '100%', height: '80vh', border: 'solid #FFA000' }}
-                                                        />
-                                                        <div className="overlay">
-                                                            <div className="overlay-content">
-                                                                <p className="project-title">{project.name}</p>
-                                                                <p className="project-description"><b>{project.description}</b></p>
-                                                                {project.topics.map((tech, index) => (
-                                                                    <Stack direction="vertical" gap={1} key={index}>
-                                                                        <Badge pill bg={techColors[index % techColors.length]} style={{ fontSize: '12px', width: '200px', }} >
-                                                                            {tech}
-                                                                        </Badge>
-                                                                    </Stack>
-
-                                                                ))}
-                                                            </div>
-
-                                                        </div>
+                                                       
+                                                        <codersrank-timeline type="technologies" username="rileymanda"></codersrank-timeline>
                                                     </div>
                                                 </Stack>
                                             </Col>

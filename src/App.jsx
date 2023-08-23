@@ -1,27 +1,29 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
 import Projects from './components/Projects';
-import { Element } from 'react-scroll';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 function App() {
   const [searchKeyword, setSearchKeyword] = useState('');
 
+  // Create refs for the sections
+  const homeRef = useRef(null);
+  const projectsRef = useRef(null);
+
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
+        <Header homeRef={homeRef} projectsRef={projectsRef} />
         <div className="content-container">
-          <Element name="home" className="element">
+          {/* Assign the refs to the div elements */}
+          <div ref={homeRef}>
             <Home />
-          </Element>
-          <Element name="projects" className="element">
+          </div>
+          <div ref={projectsRef}>
             <Projects setSearchKeyword={setSearchKeyword} searchKeyword={searchKeyword} />
-            {/* Pass both setSearchKeyword and searchKeyword */}
-          </Element>
+          </div>
         </div>
       </BrowserRouter>
     </div>
