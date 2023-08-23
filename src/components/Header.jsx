@@ -21,7 +21,7 @@ const Header = ({ homeRef, projectsRef, experienceRef }) => {
           <Nav className="me-auto" style={{ maxHeight: '100px' }} navbarScroll>
             <Nav.Link onClick={() => scrollToRef(homeRef)}>Home</Nav.Link>
             <Nav.Link onClick={() => scrollToRef(projectsRef)}>Projects</Nav.Link>
-            <Nav.Link onClick={() => scrollToRef(experienceRef)}>Projects</Nav.Link>
+            <Nav.Link onClick={() => scrollToRef(experienceRef)}>Experience</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
