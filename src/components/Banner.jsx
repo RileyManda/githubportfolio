@@ -11,15 +11,14 @@ import Stack from 'react-bootstrap/Stack';
 import Loader from './Loader';
 import { ProgrammingIcons, FrontendIcons, BackendIcons, FrameworkIcons, EditorIcons } from './Icons';
 import { orangeIconStyles, blueIconStyles, purpleIconStyles, greenIconStyles, redIconStyles } from './IconColor';
-// import Timeline from './Timeline';
 import Summary from './Summary';
+
 
 export default function Banner() {
     const projects = useSelector(state => state.home.projects);
     const isLoading = useSelector(state => state.home.isLoading);
     const dispatch = useDispatch();
     // const techColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark'];
-
     useMemo(() => {
         dispatch(fetchProjects());
     }, [dispatch]);
@@ -101,25 +100,27 @@ export default function Banner() {
 
 
                                             </Col>
+                                            
                                             <Col className="column-2">
-                                                <Card style={{
-                                                    border: 'none',
-                                                    height: '90vh',
-                                                    width: '100%',
-                                                }}>
+                                                <Card style={{ border: 'none', height: '90vh', width: '100%' }}>
                                                     <Row>
-                                                        <Col>
-                                                            <Stack direction="vertical" gap={2}>
-
-                                                                <Summary />
-
-                                                            </Stack>
-
+                                                        <Col sm={1} lg={1} md={1}></Col>
+                                                        <Col className="column-2">
+                                                            <Card style={{ border: 'none', height: '90vh', width: '100%' }}>
+                                                                <Row>
+                                                                    <Col sm={1} lg={1} md={1}></Col>
+                                                                    <Col>
+                                                                        <Stack direction="vertical" gap={2}>                                  
+                                                                                <Summary />
+                                                                        </Stack>
+                                                                    </Col>
+                                                                </Row>
+                                                            </Card>
                                                         </Col>
-
                                                     </Row>
                                                 </Card>
                                             </Col>
+
                                         </Row>
                                     </Card>
                                 </Col>
