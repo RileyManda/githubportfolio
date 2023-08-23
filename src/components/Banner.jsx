@@ -108,7 +108,7 @@ export default function Banner() {
                                             </Col>
                                             <Col>
                                                 <Stack direction="vertical" gap={2}>
-                                                <codersrank-skills-chart labels="true" legend="true" username="rileymanda"></codersrank-skills-chart>
+                                                    <codersrank-skills-chart branding="false" labels="true" legend="true" username="rileymanda"></codersrank-skills-chart>
                                                 </Stack>
                                             </Col>
                                         </Row>
