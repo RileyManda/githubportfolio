@@ -3,7 +3,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import PropTypes from 'prop-types';
 import Nav from 'react-bootstrap/Nav';
 
-const Header = ({ homeRef, projectsRef }) => {
+const Header = ({ homeRef, projectsRef, experienceRef }) => {
   const scrollToRef = (ref) => {
     if (ref.current) {
       window.scrollTo({ top: ref.current.offsetTop - 100, behavior: 'smooth' });
@@ -21,6 +21,7 @@ const Header = ({ homeRef, projectsRef }) => {
           <Nav className="me-auto" style={{ maxHeight: '100px' }} navbarScroll>
             <Nav.Link onClick={() => scrollToRef(homeRef)}>Home</Nav.Link>
             <Nav.Link onClick={() => scrollToRef(projectsRef)}>Projects</Nav.Link>
+            <Nav.Link onClick={() => scrollToRef(experienceRef)}>Experience</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -30,5 +31,6 @@ const Header = ({ homeRef, projectsRef }) => {
 Header.propTypes = {
   homeRef: PropTypes.object.isRequired,
   projectsRef: PropTypes.object.isRequired,
+  experienceRef: PropTypes.object.isRequired,
 };
 export default Header;
