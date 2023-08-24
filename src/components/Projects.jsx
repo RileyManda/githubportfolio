@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useMemo } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchProjects } from '../redux/projects/projectSlice';
 import ProjectCard from './ProjectCard';
@@ -21,7 +21,7 @@ const Projects = ({ setSearchKeyword, searchKeyword }) => {
 
   const dispatch = useDispatch();
 
-  useMemo(() => {
+  useEffect(() => {
     dispatch(fetchProjects());
   }, [dispatch]);
 
