@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const fetchProjects = createAsyncThunk('projects/fetchProjects', async () => {
     try {
-        const accessToken = import.meta.env.VITE_GIT_TOKEN;
+        const accessToken = import.meta.env.VITE_TOKEN;
         const response = await axios.get(`https://api.github.com/users/RileyManda/repos`,{
             headers: {
                 Authorization: `Bearer ${accessToken}`,
