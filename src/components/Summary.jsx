@@ -1,6 +1,4 @@
 import CodersrankSummary from '@codersrank/summary';
-
-// register web component as <codersrank-summary> element
 window.customElements.define('codersrank-summary', CodersrankSummary);
 
 
