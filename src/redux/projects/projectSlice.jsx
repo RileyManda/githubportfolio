@@ -4,11 +4,17 @@ import axios from 'axios';
 export const fetchProjects = createAsyncThunk('projects/fetchProjects', async () => {
     try {
         const accessToken = import.meta.env.VITE_API_KEY;
-        const response = await axios.get(`https://api.github.com/users/RileyManda/repos`,{
+        // console.log(import.meta.env.VITE_API_KEY)
+
+        const response = await axios.get(`https://api.github.com/users/RileyManda/repos?page=1&per_page=100`,{
             headers: {
                 Authorization: `Bearer ${accessToken}`,
             },
         });
+        console.log('X-RateLimit-Limit:', response.headers['x-ratelimit-limit']);
+        console.log('X-RateLimit-Remaining:', response.headers['x-ratelimit-remaining']);
+        console.log('X-RateLimit-Reset:', response.headers['x-ratelimit-reset']);
+
         return response.data;
     } catch (error) {
         throw new Error('Failed to fetch projects.');
@@ -20,6 +26,7 @@ const initialState = {
     projects: [],
     isLoading: false,
     error: undefined,
+    isDataFetched: false,
 };
 
 const projectsSlice = createSlice({
@@ -36,6 +43,7 @@ const projectsSlice = createSlice({
             .addCase(fetchProjects.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.projects = action.payload;
+                state.isDataFetched = true; 
             })
             .addCase(fetchProjects.rejected, (state, action) => {
                 state.isLoading = false;

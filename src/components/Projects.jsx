@@ -18,14 +18,19 @@ import Navbar from 'react-bootstrap/Navbar';
 const Projects = ({ setSearchKeyword, searchKeyword }) => {
   const projects = useSelector(state => state.home.projects);
   const isLoading = useSelector(state => state.home.isLoading);
+  const isDataFetched = useSelector(state => state.home.isDataFetched);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchProjects());
-  }, [dispatch]);
+    // Fetch data only if it's not already fetched from redux store
+    if (!isDataFetched) {
+      dispatch(fetchProjects());
+    }
+  }, [dispatch, isDataFetched]);
+  console.log('isDataFetched:', isDataFetched);
 
-  if (isLoading) {
+  if (isLoading && !isDataFetched) {
     return <div><Loader /></div>;
   }
 
