@@ -9,10 +9,6 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "engines": {
-  "node": "^14.18.0 || >=16.0.0"
-},
-
   "dependencies": {
     "@codersrank/skills-chart": "^0.9.21",
     "@codersrank/summary": "^0.9.13",
