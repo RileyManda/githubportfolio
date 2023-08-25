@@ -9,9 +9,9 @@ export const fetchProjects = createAsyncThunk('projects/fetchProjects', async ()
                 Authorization: `Bearer ${accessToken}`,
             },
         });
-        console.log('X-RateLimit-Limit:', response.headers['x-ratelimit-limit']);
-        console.log('X-RateLimit-Remaining:', response.headers['x-ratelimit-remaining']);
-        console.log('X-RateLimit-Reset:', response.headers['x-ratelimit-reset']);
+        // console.log('X-RateLimit-Limit:', response.headers['x-ratelimit-limit']);
+        // console.log('X-RateLimit-Remaining:', response.headers['x-ratelimit-remaining']);
+        // console.log('X-RateLimit-Reset:', response.headers['x-ratelimit-reset']);
 
         return response.data;
     } catch (error) {
