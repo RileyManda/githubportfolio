@@ -74,7 +74,7 @@ const Projects = ({ setSearchKeyword, searchKeyword }) => {
                   created={formatDate(project.created_at)}
                   applogo={AppLogo}
                   title={project.name}
-                  description={project.description || 'Default Description'}
+                  description={project.description || 'Project Description not available'}
                   demo={project.homepage}
                   github={project.html_url}
                   techarray={project.topics || []}
