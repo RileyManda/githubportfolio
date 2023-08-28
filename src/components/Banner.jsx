@@ -12,10 +12,11 @@ import Loader from './Loader';
 import { ProgrammingIcons, FrontendIcons, BackendIcons, FrameworkIcons, EditorIcons } from './Icons';
 import { orangeIconStyles, blueIconStyles, purpleIconStyles, greenIconStyles, redIconStyles } from './IconColor';
 import Summary from './Summary';
+import introductionData from './IntroductionData';
 
 
 export default function Banner() {
-    const projects = useSelector(state => state.home.projects);
+    // const projects = useSelector(state => state.home.projects);
     const isLoading = useSelector(state => state.home.isLoading);
     const dispatch = useDispatch();
     // const techColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark'];
@@ -27,25 +28,26 @@ export default function Banner() {
         return <div><Loader /></div>;
     }
 
-    const projectsWithTopics = projects.filter(project =>
-        project.topics && project.topics.length > 0);
+    // const projectsWithTopics = projects.filter(project =>
+    //     project.topics && project.topics.length > 0);
 
 
     return (
-        <div className="banner-container" style={{ width: '100%', height: '90vh' }}>
-            <Carousel data-bs-theme="dark" className="carousel-container">
-                {projectsWithTopics.map((project, index) => (
-                    <Carousel.Item key={index} data-bs-theme="light">
-                        <Container className="column-container">
-                            <Row>
-                                <Col sm={12} lg={6} className="column-1">
+        <div className="banner-container">
+            <Container fluid>
+                <Carousel data-bs-theme="dark">
+                    {introductionData.map((project, index) => (
+                        <Carousel.Item key={index} data-bs-theme="light">
+
+                            <Row xs="auto" className="justify-content-center">
+                                <Col sm={12} lg={6} className="carousel-item-content">
                                     <Card style={{
                                         border: 'none',
                                         height: '90vh',
                                     }}>
-                                        <h1>I am Riley Manda</h1>
-                                        <p>A Full Stack Software Engineer with a passion for building mobile & web applications</p>
-                                        <Stack gap={3}>
+                                        <h1>{project.title}</h1>
+                                        <p>{project.description}</p>
+                                        <Stack gap={3} direction="vertical">
                                             <Stack direction="horizontal" gap={3}>
                                                 <Badge pill bg="dark">Programming languages</Badge>
                                                 {ProgrammingIcons.map((icon, index) => (
@@ -89,46 +91,22 @@ export default function Banner() {
                                         </Stack>
                                     </Card>
                                 </Col>
-                                <Col sm={12} lg={6} className="column-2">
+                                <Col sm={12} lg={6} className="carousel-item-content">
                                     <Card style={{
                                         border: 'none',
                                         height: '90vh',
-                                        width: '100%',
                                     }}>
-                                        <Row>
-                                            <Col sm={1} lg={1} md={1}>
-
-
-                                            </Col>
-                                            
-                                            <Col className="column-2">
-                                                <Card style={{ border: 'none', height: '90vh', width: '100%' }}>
-                                                    <Row>
-                                                        <Col sm={1} lg={1} md={1}></Col>
-                                                        <Col className="column-2">
-                                                            <Card style={{ border: 'none', height: '90vh', width: '100%' }}>
-                                                                <Row>
-                                                                    <Col sm={1} lg={1} md={1}></Col>
-                                                                    <Col>
-                                                                        <Stack direction="vertical" gap={2}>                                  
-                                                                                <Summary />
-                                                                        </Stack>
-                                                                    </Col>
-                                                                </Row>
-                                                            </Card>
-                                                        </Col>
-                                                    </Row>
-                                                </Card>
-                                            </Col>
-
-                                        </Row>
+                                        <Stack direction="vertical">
+                                            <Summary />
+                                        </Stack>
                                     </Card>
                                 </Col>
+
                             </Row>
-                        </Container>
-                    </Carousel.Item>
-                ))}
-            </Carousel>
+                        </Carousel.Item>
+                    ))}
+                </Carousel>
+            </Container>
         </div>
     );
 }

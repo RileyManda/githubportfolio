@@ -11,15 +11,15 @@ const Header = ({ homeRef, projectsRef, experienceRef }) => {
   };
 
   return (
-    <Navbar expand="lg" sticky="top" bg="dark" variant="dark" className="custom-navbar">
+    <Navbar expand="lg" sticky="top" variant="dark" className="custom-navbar">
       <Container fluid>
-        <Navbar.Brand href="/" style={{ color: '#fff' }}>
+        <Navbar.Brand href="/">
           RileyManda
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto" style={{ maxHeight: '100px' }} navbarScroll>
-            <Nav.Link onClick={() => scrollToRef(homeRef)}>Home</Nav.Link>
+            <Nav.Link onClick={() => scrollToRef(homeRef)} >Home</Nav.Link>
             <Nav.Link onClick={() => scrollToRef(projectsRef)}>Projects</Nav.Link>
             <Nav.Link onClick={() => scrollToRef(experienceRef)}>Experience</Nav.Link>
           </Nav>

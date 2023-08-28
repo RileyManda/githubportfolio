@@ -1,16 +1,21 @@
 import CodersrankTimeline from '@codersrank/timeline';
+import Container from 'react-bootstrap/Container';
 
-// register web component as <codersrank-timeline> element
 window.customElements.define('codersrank-timeline', CodersrankTimeline);
 
 const Timeline = () => {
   return (
-    <div className="timeline-container">
+    <div className="timeline-container" id="experience">
+      <div className="section-title">
+        <h2>Experience</h2></div>
+      <Container fluid>
+     
       <codersrank-timeline
         username="rileymanda"
         type="technologies"
         branding="false"
-      ></codersrank-timeline>  
+      ></codersrank-timeline>
+      </Container>  
     </div>
   );
 };

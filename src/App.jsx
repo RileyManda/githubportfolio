@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Timeline from './components/Timeline';
+// import './App.css'
 
 function App() {
   const [searchKeyword, setSearchKeyword] = useState('');
@@ -15,10 +16,9 @@ function App() {
   const experienceRef = useRef(null);
 
   return (
-    <div className="App">
+    <div className="app-container">
       <BrowserRouter>
         <Header homeRef={homeRef} projectsRef={projectsRef} experienceRef={experienceRef} />
-        <div className="content-container">
           <div ref={homeRef}>
             <Home />
           </div>
@@ -29,7 +29,7 @@ function App() {
           <div ref={experienceRef}>
           <Timeline />
           </div>
-        </div>
+ 
       </BrowserRouter>
     </div>
   );
