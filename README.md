@@ -40,9 +40,7 @@
 
 # 📖 RileysPortfolio <a name="about-project"></a>
 
-This is my personal portfolio project which showcases my skills and projects.
- <img src="app-screenshot.png" alt="logo" width="140"  height="auto" />
-  <img src="detail-screenshot.png" alt="logo" width="140"  height="auto" />
+This is my personal portfolio project which showcases my skills and projects i have worked on. It is a single page application built with React and Redux-toolkit. It is a responsive web application that can be viewed on any device. The project has a navbar that links to different sections of the page. It has a projects section that displays my projects and a work experience section that displays my work experience. It also has a skills section that displays my skills and a contact section that displays my contact information.
 
 ## 🛠 Built With <a name="built-with"></a>
 
