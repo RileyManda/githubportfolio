@@ -7,6 +7,7 @@
 
   <h3><b>RileysPortfolio</b></h3>
 
+
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -191,7 +192,7 @@ To run tests, run the following command:
 ### Deployment
 
 You can deploy this project using:
-    
+
 ```sh
     npm run build
 ```
@@ -229,6 +230,9 @@ You can deploy this project using:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+>Tests
+
+[![MIT License](https://github.com/RileyManda/rileysportfolio/actions/workflows/linters.yml/badge.svg)](https://github.com/RileyManda/rileysportfolio/actions/workflows/linters.yml)
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
