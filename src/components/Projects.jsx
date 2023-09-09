@@ -37,39 +37,35 @@ const Projects = ({ setSearchKeyword, searchKeyword }) => {
   };
 
   return (
-    <div id="projects">
+    <div id="projects" className="project-container">
       <Container fluid>
-        <Navbar expand="lg" sticky="top" bg="dark" variant="dark" className="custom-navbar">
+        <div className="section-title">
+          <h2>Projects</h2>
+        </div>
+
+        <Navbar expand="lg" sticky="top" variant="dark" className="search-bar">
           <Nav>
-            <NavDropdown title="Filterby" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">React</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Redux-toolkit
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Javascript</NavDropdown.Item>
+            <NavDropdown title="Filter by:" id="collapsible-nav-dropdown">
+              <NavDropdown.Item href="#react">React</NavDropdown.Item>
+              <NavDropdown.Item href="#redux">Redux-toolkit</NavDropdown.Item>
+              <NavDropdown.Item href="#js">Javascript</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Full-stack
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4">
-                Ruby|Rails
-              </NavDropdown.Item>
+              <NavDropdown.Item href="#fs">Full-stack</NavDropdown.Item>
+              <NavDropdown.Item href="#rr">Ruby|Rails</NavDropdown.Item>
             </NavDropdown>
-          
           </Nav>
           <SearchField setSearchKeyword={setSearchKeyword} />
         </Navbar>
-     
-       
+
         <Stack gap={3}>
-          <Row xs="auto" className="justify-content-center p-2">
+          <Row xs="auto" md="auto" className="justify-content-center">
             {projectsWithTopics.map((project, index) => (
               <Col key={index} xs="auto">
                 <ProjectCard
                   created={formatDate(project.created_at)}
                   applogo={AppLogo}
                   title={project.name}
-                  description={project.description || 'Default Description'}
+                  description={project.description || 'Project Description'}
                   demo={project.homepage}
                   github={project.html_url}
                   techarray={project.topics || []}
