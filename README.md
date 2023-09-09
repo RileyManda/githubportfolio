@@ -39,9 +39,10 @@
 
 # 📖 RileysPortfolio <a name="about-project"></a>
 
-This is my personal portfolio project which showcases my skills and projects.
- <img src="app-screenshot.png" alt="logo" width="140"  height="auto" />
-  <img src="detail-screenshot.png" alt="logo" width="140"  height="auto" />
+This is my personal portfolio project, meticulously crafted to be a reflection of my skills, achievements, and passion for web development. Here, you'll find a curated selection of my projects, each showcasing my expertise and dedication to creating innovative and user-friendly web applications. Explore my portfolio to get a glimpse of my journey in the world of web development and discover the exciting projects I've had the privilege to work on.
+
+ <!-- <img src="app-screenshot.png" alt="logo" width="140"  height="auto" />
+  <img src="detail-screenshot.png" alt="logo" width="140"  height="auto" /> -->
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -114,13 +115,13 @@ This is my personal portfolio project which showcases my skills and projects.
 ## 🛠 Key Features <a name="key-features"></a>
 ### Features <a name="key-features"></a>
 
-*Projects*
+>Projects
 
-*Work experience*
+>Work experience
 
-*Skills*
+>Skills
 
-*Contact*
+>Contact component
 
 <p align="right">
 (<a href="#readme-top">back to top</a>)</p>
@@ -191,7 +192,7 @@ To run tests, run the following command:
 ### Deployment
 
 You can deploy this project using:
-    
+
 ```sh
     npm run build
 ```
@@ -220,11 +221,9 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-*Feature1*
+>Mobile Version
 
-*Feature2*
-
-*Feature3*
+>Implement Media Queries For Mobile Responsiveness
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -258,7 +257,14 @@ Thank you for taking the time to explore this project! Your support means a lot 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Gratitude goes to [Microverseinc](https://github.com/microverseinc) for the introductory material on React and Redux which inspired me to create and use of this [linter and git workflows setup](https://github.com/RileyManda/linter-config) based on this [template](https://github.com/microverseinc/linters-config/tree/master/react-redux) that i am using in this project and across all my other projects to ensure code quality and correct usage of syntax across css,jsx and js.
+I would like to express my gratitude to the following individuals and organizations who have contributed to this project and my development journey:
+
+- [Microverseinc](https://github.com/microverseinc): I extend my sincere appreciation for their exceptional introductory materials on React and Redux, which served as the foundation for this project.
+
+- [Linter and Git Workflows Setup](https://github.com/RileyManda/linter-config): This project benefited greatly from the setup inspired by Microverseinc's [template](https://github.com/microverseinc/linters-config/tree/master/react-redux). I've incorporated it not only into this project but also across all my other projects. It ensures impeccable code quality and precise adherence to syntax standards in CSS, JSX, and JavaScript.
+
+Your contributions have been instrumental in the success of this project, and I'm thankful for the knowledge and resources you've provided.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
