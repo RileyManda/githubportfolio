@@ -18,7 +18,7 @@
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
     - [🚀 Live Demo](#live-demo)
-    - [🚀 Project Presentation](#project-presentation)
+    <!-- - [🚀 Project Presentation](#project-presentation) -->
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -39,7 +39,7 @@
 
 # 📖 RileysPortfolio <a name="about-project"></a>
 
-This is my personal portfolio project, meticulously crafted to be a reflection of my skills, achievements, and passion for web development. Here, you'll find a curated selection of my projects, each showcasing my expertise and dedication to creating innovative and user-friendly web applications. Explore my portfolio to get a glimpse of my journey in the world of web development and discover the exciting projects I've had the privilege to work on.
+This is my personal portfolio project, meticulously crafted to be a reflection of my skills, achievements, and passion for web development. Here, you'll find a curated selection of my projects, each showcasing my expertise and dedication to creating innovative and user-friendly web applications. Explore my portfolio to get a glimpse of my journey as a Full Stack developer and discover the exciting projects I've had the privilege to work on.
 
  <!-- <img src="app-screenshot.png" alt="logo" width="140"  height="auto" />
   <img src="detail-screenshot.png" alt="logo" width="140"  height="auto" /> -->
@@ -129,11 +129,11 @@ This is my personal portfolio project, meticulously crafted to be a reflection o
 <!-- LIVE DEMO -->
  ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://)
+- [Live Demo](https://rileysportfolio.onrender.com/)
 
-## 🚀 Project Presentation <a name="project-presentation"></a>
+<!-- ## 🚀 Project Presentation <a name="project-presentation"></a>
 
-- [Project Presentation ](https://rileysportfolio.onrender.com/)
+- [Project Presentation ](https://rileysportfolio.onrender.com/) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
