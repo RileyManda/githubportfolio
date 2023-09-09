@@ -80,6 +80,10 @@
   color: var(--white-font-color);
 }
 
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
 .search-bar {
   margin-bottom: 8px;
   background: var(--metallic-bg-gradient);
