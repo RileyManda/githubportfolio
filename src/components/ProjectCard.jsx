@@ -25,8 +25,8 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
     };
     return (
         <div>
-            <Card style={{ width: '18rem', marginBottom: '3rem', height: isAccordionOpen ? 'auto' : '550px' }}
-                border="warning">
+            <Card className="project-card" style={{ width: '20rem', marginBottom: '3rem', height: isAccordionOpen ? 'auto' : '550px' }}
+                border="dark">
                 <Card.Img variant="top" src={applogo} />
                 <Card.ImgOverlay style={{ height: '250px' }}>
                     <Badge bg="dark" style={{ opacity: '0.8' }}><Card.Title style={{ fontSize: '18px' }}>{title}</Card.Title></Badge>
@@ -50,15 +50,15 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
                             </Badge>
                         ))}
                     </div>
-                  
+
                 </Card.Body>
                 <Card.Footer bg="dark">
                     <Stack direction="horizontal" gap={3}>
-                        <Button onClick={handleDemoClick} size="sm" variant="info"><AiFillEye /></Button>
-                        <Button onClick={handleGithubClick} size="sm" variant="info"><AiFillGithub /></Button>
-                        <small className="text-muted" style={{ fontSize: '9px', fontWeight: 'bold' }}>Created: {created}</small>
+                        <Button onClick={handleDemoClick} size="sm" variant="dark"><AiFillEye style={{ color: 'white' }} /></Button>
+                        <Button onClick={handleGithubClick} size="sm" variant="dark"><AiFillGithub style={{ color: 'white' }} /></Button>
+                        <small style={{ fontSize: '9px', fontWeight: 'bold', color: 'white' }}>Created: {created}</small>
                         <div className="vr" />
-                        <small className="text-muted" style={{ fontSize: '9px', fontWeight: 'bold' }}>Updated: {updated}</small>
+                        <small  style={{ fontSize: '9px', fontWeight: 'bold', color: 'white' }}>Updated: {updated}</small>
 
 
                     </Stack>

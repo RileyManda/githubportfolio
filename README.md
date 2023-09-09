@@ -56,16 +56,29 @@ This is my personal portfolio project which showcases my skills and projects.
 </details>
 
 <details>
-  <summary>Redux</summary>
+  <summary>Redux-toolkit</summary>
   <ul>
     <li><a href="https://redux.js.org/">Redux-toolkit</a></li>
   </ul>
 </details>
 
 <details>
+  <summary>Axios</summary>
+  <ul>
+    <li><a href="https://axios-http.com/">Axios</a></li>
+  </ul>
+</details>
+<details>
   <summary>Node js</summary>
   <ul>
-    <li><a href="https://nodejs.org/en">Redux-toolkit</a></li>
+    <li><a href="https://nodejs.org/en">Node</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Localstorage</summary>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">Localstorage</a></li>
   </ul>
 </details>
 
@@ -76,19 +89,12 @@ This is my personal portfolio project which showcases my skills and projects.
   </ul>
 </details>
 
-<!-- <details>
-  <summary>Axios</summary>
+ <details>
+  <summary>Rest-API</summary>
   <ul>
-    <li><a href="https://axios-http.com/">Axios</a></li>
+    <li><a href="https://docs.github.com/en/rest?apiVersion=2022-11-28">Github API</a></li>
   </ul>
-</details> -->
-
- <!-- <details>
-  <summary>API</summary>
-  <ul>
-    <li><a href="https://api.openaq.org/">Open AQ API</a></li>
-  </ul>
-</details> -->
+</details>
 
  <details>
   <summary>React Bootstrap</summary>
@@ -108,11 +114,13 @@ This is my personal portfolio project which showcases my skills and projects.
 ## 🛠 Key Features <a name="key-features"></a>
 ### Features <a name="key-features"></a>
 
-*Feature1*
+*Projects*
 
-*Feature2*
+*Work experience*
 
-*Feature3*
+*Skills*
+
+*Contact*
 
 <p align="right">
 (<a href="#readme-top">back to top</a>)</p>
@@ -124,7 +132,7 @@ This is my personal portfolio project which showcases my skills and projects.
 
 ## 🚀 Project Presentation <a name="project-presentation"></a>
 
-- [Project Presentation ](https://)
+- [Project Presentation ](https://rileysportfolio.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
