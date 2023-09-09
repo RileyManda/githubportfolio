@@ -120,3 +120,24 @@
   bottom: -5px;
   right: -2px;
 }
+
+/* .contact-container {
+  margin: 6px 0;
+  margin-bottom: 10px;
+  background: var(--metallic-bg-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--metallic-bg-gradient);
+}
+
+.footer {
+  color: var(--white-font-color);
+  text-align: center;
+}

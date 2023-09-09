@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchProjects } from '../redux/projects/projectSlice';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
@@ -8,7 +8,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
-import Loader from './Loader';
+// import Loader from './Loader';
 import { ProgrammingIcons, FrontendIcons, BackendIcons, FrameworkIcons, EditorIcons } from './Icons';
 import { orangeIconStyles, blueIconStyles, purpleIconStyles, greenIconStyles, redIconStyles } from './IconColor';
 import Summary from './Summary';
@@ -16,16 +16,13 @@ import introductionData from './IntroductionData';
 
 
 export default function Banner() {
-  const isLoading = useSelector(state => state.home.isLoading);
+  // const isLoading = useSelector(state => state.home.isLoading);
   const dispatch = useDispatch();
 
   useMemo(() => {
     dispatch(fetchProjects());
   }, [dispatch]);
 
-  if (isLoading) {
-    return <div><Loader /></div>;
-  }
 
   return (
     <div className="banner-container">
