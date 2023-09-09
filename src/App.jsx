@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Projects from './components/Projects';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Timeline from './components/Timeline';
+import Contact from './components/Contact';
 
 function App() {
   const [searchKeyword, setSearchKeyword] = useState('');
@@ -13,6 +14,7 @@ function App() {
   const homeRef = useRef(null);
   const projectsRef = useRef(null);
   const experienceRef = useRef(null);
+  const contactRef = useRef(null);
 
   return (
     <div>
@@ -28,6 +30,10 @@ function App() {
 
           <div ref={experienceRef}>
           <Timeline />
+          </div>
+
+          <div ref={contactRef}>
+            <Contact />
           </div>
         </div>
       </BrowserRouter>
