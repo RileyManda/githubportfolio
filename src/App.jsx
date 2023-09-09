@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Header homeRef={homeRef} projectsRef={projectsRef} experienceRef={experienceRef} />
+        <Header homeRef={homeRef} projectsRef={projectsRef} experienceRef={experienceRef} contactRef={contactRef} />
         <div className="content-container">
           <div ref={homeRef}>
             <Home />
