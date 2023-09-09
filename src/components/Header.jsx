@@ -19,7 +19,7 @@ const Header = ({ homeRef, projectsRef, experienceRef }) => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto" style={{ maxHeight: '100px' }} navbarScroll>
-            <Nav.Link onClick={() => scrollToRef(homeRef)} >Home</Nav.Link>
+            <Nav.Link onClick={() => scrollToRef(homeRef)}>Home</Nav.Link>
             <Nav.Link onClick={() => scrollToRef(projectsRef)}>Projects</Nav.Link>
             <Nav.Link onClick={() => scrollToRef(experienceRef)}>Experience</Nav.Link>
           </Nav>
@@ -29,8 +29,8 @@ const Header = ({ homeRef, projectsRef, experienceRef }) => {
   );
 };
 Header.propTypes = {
-  homeRef: PropTypes.object.isRequired,
-  projectsRef: PropTypes.object.isRequired,
-  experienceRef: PropTypes.object.isRequired,
+  homeRef: PropTypes.string.isRequired,
+  projectsRef: PropTypes.string.isRequired,
+  experienceRef: PropTypes.string.isRequired,
 };
 export default Header;
