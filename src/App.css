@@ -89,3 +89,34 @@
 .timeline-container {
   margin: 6px 0;
 }
+
+/* Screws */
+.screw {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #888 20%, transparent 5%);
+  background-size: 20px 20px;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.screw.top-left {
+  top: -5px;
+  left: -2px;
+}
+
+.screw.top-right {
+  top: -5px;
+  right: -2px;
+}
+
+.screw.bottom-left {
+  bottom: -5px;
+  left: -2px;
+}
+
+.screw.bottom-right {
+  bottom: -5px;
+  right: -2px;
+}
