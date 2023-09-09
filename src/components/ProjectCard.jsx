@@ -50,7 +50,7 @@ const ProjectCard = ({ applogo, title, description, demo, github, techarray, cre
                             </Badge>
                         ))}
                     </div>
-                  
+
                 </Card.Body>
                 <Card.Footer bg="dark">
                     <Stack direction="horizontal" gap={3}>
