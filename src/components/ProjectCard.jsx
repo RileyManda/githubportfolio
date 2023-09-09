@@ -48,6 +48,7 @@ const ProjectCard = ({
           </Accordion>
           <div className="badge-container">
             {techarray.map((tech, index) => (
+              // eslint-disable-next-line react/no-array-index-key
               <Badge pill key={index} bg={techColors[index % techColors.length]} style={{ fontSize: '12px' }}>
                 {tech}
               </Badge>
