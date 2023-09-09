@@ -56,6 +56,7 @@
 
 .search-bar {
   margin-bottom: 8px;
+  background-color: var(--custom-primary-color);
 }
 
 /* timeline */

@@ -42,7 +42,7 @@ const Projects = ({ setSearchKeyword, searchKeyword }) => {
         <div className="section-title">
           <h2>Projects</h2></div>
 
-        <Navbar expand="lg" sticky="top" bg="dark" variant="dark" className="search-bar">
+        <Navbar expand="lg" sticky="top"  variant="dark" className="search-bar">
           <Nav>
             <NavDropdown title="Filter by:" id="collasible-nav-dropdown">
               <NavDropdown.Item href="#react">React</NavDropdown.Item>
