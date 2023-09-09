@@ -14,17 +14,22 @@
   --timeline-item-font-size: 12px;
   --timeline-item-padding: 4px 8px;
   --timeline-item-border-radius: 4px;
-  --section-title-font-color: #aa3232;
+  --section-title-font-color: #ffa000;
+
+  /* New metallic and robotic-themed variables */
+  --metallic-bg-gradient: linear-gradient(135deg, #363c48, #1c2331);
+  --robotic-font-family: 'Roboto', sans-serif;
 }
 
 .app-container {
-  background-color: var(--bg-app-color);
+  background: var(--metallic-bg-gradient);
   display: flex;
   flex-direction: column;
 }
 
 .custom-navbar {
-  background-color: var(--custom-primary-color);
+  background: var(--metallic-bg-gradient);
+  font-family: var(--robotic-font-family);
 }
 
 .nav-link:hover {
@@ -33,6 +38,16 @@
 
 .content-container {
   align-items: center;
+}
+
+/* component  fonts */
+.section-title h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--section-title-font-color);
+  align-content: center;
+  text-align: center;
+  margin-bottom: 12px;
 }
 
 /* banner */
@@ -52,24 +67,25 @@
 .project-container {
   margin: 6px 0;
   margin-bottom: 10px;
+  background: var(--metallic-bg-gradient);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #1c2331, #363c48);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  border-radius: 1px;
+  color: var(--white-font-color);
 }
 
 .search-bar {
   margin-bottom: 8px;
-  background-color: var(--custom-primary-color);
+  background: var(--metallic-bg-gradient);
 }
 
 /* timeline */
 .timeline-container {
   margin: 6px 0;
-}
-
-/* component  fonts */
-.section-title h2 {
-  font-size: 30px;
-  font-weight: 600;
-  color: var(--section-title-font-color);
-  align-content: center;
-  text-align: center;
-  margin-bottom: 12px;
 }

@@ -15,7 +15,7 @@ function App() {
   const experienceRef = useRef(null);
 
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
         <Header homeRef={homeRef} projectsRef={projectsRef} experienceRef={experienceRef} />
         <div className="content-container">

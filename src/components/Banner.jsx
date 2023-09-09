@@ -16,10 +16,9 @@ import introductionData from './IntroductionData';
 
 
 export default function Banner() {
-  // const projects = useSelector(state => state.home.projects);
   const isLoading = useSelector(state => state.home.isLoading);
   const dispatch = useDispatch();
-  // const techColors = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'dark'];
+
   useMemo(() => {
     dispatch(fetchProjects());
   }, [dispatch]);
@@ -27,10 +26,6 @@ export default function Banner() {
   if (isLoading) {
     return <div><Loader /></div>;
   }
-
-  // const projectsWithTopics = projects.filter(project =>
-  //     project.topics && project.topics.length > 0);
-
 
   return (
     <div className="banner-container">
