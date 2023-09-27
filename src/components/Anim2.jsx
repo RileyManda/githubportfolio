@@ -1,4 +1,4 @@
-import CodAnim from '../assets/cod.json';
+import CodAnim from '../assets/reactanim.json';
 import Lottie from 'lottie-react';
 
 const Anim2 = () => {
