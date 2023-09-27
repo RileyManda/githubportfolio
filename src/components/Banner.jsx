@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo,useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchProjects } from '../redux/projects/projectSlice';
 import Container from 'react-bootstrap/Container';
@@ -11,27 +11,31 @@ import Stack from 'react-bootstrap/Stack';
 // import Loader from './Loader';
 import { ProgrammingIcons, FrontendIcons, BackendIcons, FrameworkIcons, EditorIcons } from './Icons';
 import { orangeIconStyles, blueIconStyles, purpleIconStyles, greenIconStyles, redIconStyles } from './IconColor';
-import Summary from './Summary';
+// import Summary from './Summary';
 import introductionData from './IntroductionData';
+import AnimData from './AnimData';
 
 
 export default function Banner() {
   // const isLoading = useSelector(state => state.home.isLoading);
   const dispatch = useDispatch();
+  const [currentAnimData, setCurrentAnimData] = useState(0);
 
   useMemo(() => {
     dispatch(fetchProjects());
   }, [dispatch]);
-
+  const handleSlide = (selectedIndex) => {
+    setCurrentAnimData(selectedIndex);
+  };
 
   return (
     <div className="banner-container">
       <Container fluid>
-        <Carousel data-bs-theme="dark">
+        <Carousel data-bs-theme="dark" activeIndex={currentAnimData} onSelect={handleSlide}>
           {introductionData.map((project, index) => (
             <Carousel.Item key={index} data-bs-theme="light">
 
-              <Row xs="auto" className="justify-content-center">
+              <Row  className="justify-content-center">
                 <Col sm={12} lg={6} className="carousel-item-content">
                   <Card style={{
                     border: 'none',
@@ -89,8 +93,12 @@ export default function Banner() {
                     height: '90vh',
                   }}>
                     <Stack direction="vertical">
-                      <Summary />
+                      {AnimData[currentAnimData % AnimData.length].map((AnimComponent, index) => (
+                        <AnimComponent key={index} />
+                      ))}
                     </Stack>
+
+
                   </Card>
                 </Col>
 

@@ -1,6 +1,6 @@
 const introductionData = [
     {
-        title: 'I am Riley Manda',
+        title: 'Hello I am Riley',
         description: 'A Full Stack Software Engineer with a passion for building mobile & web applications',
     },
     {
