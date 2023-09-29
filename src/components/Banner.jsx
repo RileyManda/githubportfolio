@@ -35,8 +35,8 @@ export default function Banner() {
           {introductionData.map((project, index) => (
             <Carousel.Item key={index} data-bs-theme="light">
 
-              <Row  className="justify-content-center">
-                <Col sm={12} lg={6} className="carousel-item-content">
+              <Row className= "justify-content-center align-items-center text-center">
+                <Col sm={12} lg={6} className="carousel-item-content d-flex justify-content-center">
                   <Card style={{
                     border: 'none',
                     height: '90vh',
@@ -87,7 +87,7 @@ export default function Banner() {
                     </Stack>
                   </Card>
                 </Col>
-                <Col sm={12} lg={6} className="carousel-item-content">
+                <Col sm={12} lg={6} className="carousel-item-content d-flex justify-content-center">
                   <Card style={{
                     border: 'none',
                     height: '90vh',
