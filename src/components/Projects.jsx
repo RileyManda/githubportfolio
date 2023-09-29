@@ -18,7 +18,6 @@ import Navbar from 'react-bootstrap/Navbar';
 const Projects = ({ setSearchKeyword, searchKeyword }) => {
   const projects = useSelector(state => state.home.projects);
   const isLoading = useSelector(state => state.home.isLoading);
-
   const dispatch = useDispatch();
 
   useMemo(() => {

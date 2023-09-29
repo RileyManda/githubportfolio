@@ -78,6 +78,7 @@
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
   border-radius: 1px;
   color: var(--white-font-color);
+  cursor: pointer;
 }
 
 .project-card:hover {
@@ -144,4 +145,32 @@
 .footer {
   color: var(--white-font-color);
   text-align: center;
+}
+
+.hero-arrow-container {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  animation: floatArrow 2s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+.hero-arrow {
+  cursor: pointer;
+}
+
+@keyframes floatArrow {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
