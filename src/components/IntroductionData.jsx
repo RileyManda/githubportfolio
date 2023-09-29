@@ -4,8 +4,8 @@ const introductionData = [
         description: 'A Full Stack Software Engineer',
     },
     {
-        title: 'My Tech Stacks Are',
-        description: 'React,Ruby,Rails,Node.js,PostgreSQL,Flutter',
+        title: 'My Tech Stacks',
+        description: 'PERN,Ruby,Rails,and Flutter',
     },
     {
         title: 'I have',
