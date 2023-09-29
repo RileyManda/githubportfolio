@@ -8,18 +8,21 @@ import Carousel from 'react-bootstrap/Carousel';
 import Badge from 'react-bootstrap/Badge';
 import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
+import { BsFillCaretDownSquareFill } from 'react-icons/bs';
+
 // import Loader from './Loader';
-import { ProgrammingIcons, FrontendIcons, BackendIcons, FrameworkIcons, EditorIcons } from './Icons';
-import { orangeIconStyles, blueIconStyles, purpleIconStyles, greenIconStyles, redIconStyles } from './IconColor';
+import { ProgrammingIcons, FrontendIcons, BackendIcons, EditorIcons } from './Icons';
+import { orangeIconStyles, blueIconStyles, purpleIconStyles, redIconStyles } from './IconColor';
 // import Summary from './Summary';
 import introductionData from './IntroductionData';
 import AnimData from './AnimData';
 
 
-export default function Banner() {
+const Banner = () => {
   // const isLoading = useSelector(state => state.home.isLoading);
   const dispatch = useDispatch();
   const [currentAnimData, setCurrentAnimData] = useState(0);
+
 
   useMemo(() => {
     dispatch(fetchProjects());
@@ -28,15 +31,23 @@ export default function Banner() {
     setCurrentAnimData(selectedIndex);
   };
 
+  const handleArrowClick = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      const offsetTop = projectsSection.offsetTop;
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <div className="banner-container">
       <Container fluid>
         <Carousel data-bs-theme="dark" activeIndex={currentAnimData} onSelect={handleSlide}>
           {introductionData.map((project, index) => (
             <Carousel.Item key={index} data-bs-theme="light">
-
-              <Row  className="justify-content-center">
-                <Col sm={12} lg={6} className="carousel-item-content">
+              <Row className= "justify-content-center align-items-center text-center">
+                <Col sm={12} lg={6} className="carousel-item-content d-flex justify-content-center">
                   <Card style={{
                     border: 'none',
                     height: '90vh',
@@ -44,14 +55,6 @@ export default function Banner() {
                     <h1>{project.title}</h1>
                     <p>{project.description}</p>
                     <Stack gap={3} direction="vertical">
-                      <Stack direction="horizontal" gap={3}>
-                        <Badge pill bg="dark">Programming languages</Badge>
-                        {ProgrammingIcons.map((icon, index) => (
-                          <div key={index} className="p-2 white-icon">
-                            {icon.icon({ style: orangeIconStyles, title: icon.label })}
-                          </div>
-                        ))}
-                      </Stack>
                       <Stack direction="horizontal" gap={3}>
                         <Badge pill bg="dark">Front-end</Badge>
                         {FrontendIcons.map((icon, index) => (
@@ -61,18 +64,19 @@ export default function Banner() {
                         ))}
                       </Stack>
                       <Stack direction="horizontal" gap={3}>
+                        <Badge pill bg="dark">Languages</Badge>
+                        {ProgrammingIcons.map((icon, index) => (
+                          <div key={index} className="p-2 white-icon">
+                            {icon.icon({ style: orangeIconStyles, title: icon.label })}
+                          </div>
+                        ))}
+                      </Stack>
+
+                      <Stack direction="horizontal" gap={3}>
                         <Badge pill bg="dark">Back-end</Badge>
                         {BackendIcons.map((icon, index) => (
                           <div key={index} className="p-2 white-icon">
                             {icon.icon({ style: purpleIconStyles, title: icon.label })}
-                          </div>
-                        ))}
-                      </Stack>
-                      <Stack direction="horizontal" gap={3}>
-                        <Badge pill bg="dark">Frameworks</Badge>
-                        {FrameworkIcons.map((icon, index) => (
-                          <div key={index} className="p-2 white-icon">
-                            <icon.icon style={greenIconStyles} title={icon.label} />
                           </div>
                         ))}
                       </Stack>
@@ -87,7 +91,7 @@ export default function Banner() {
                     </Stack>
                   </Card>
                 </Col>
-                <Col sm={12} lg={6} className="carousel-item-content">
+                <Col sm={12} lg={6} className="carousel-item-content d-flex justify-content-center">
                   <Card style={{
                     border: 'none',
                     height: '90vh',
@@ -106,7 +110,14 @@ export default function Banner() {
             </Carousel.Item>
           ))}
         </Carousel>
+        <div className="hero-arrow-container" >
+         <div className="hero-arrow" onClick={handleArrowClick}>
+            <BsFillCaretDownSquareFill size={24} />
+          </div>
+        </div>
       </Container>
-    </div>
+
+      </div>
   );
-}
+};
+export default Banner;
