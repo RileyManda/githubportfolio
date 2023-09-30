@@ -6,6 +6,11 @@ const Footer =()=> {
       <div>  <footer className="footer">
           <Stack direction="horizontal" gap={3}>
               <div className="p-2">
+                  <a href="https://www.linkedin.com/in/rileymanda/" target="_blank" rel="noopener noreferrer">
+                      <FaLinkedin style={{ color: 'white' }} />
+                  </a>
+              </div>
+              <div className="p-2">
                   <a href="https://github.com/RileyManda/" target="_blank" rel="noopener noreferrer">
                       <FaGithub style={{ color: 'white' }} />
                   </a>
@@ -16,8 +21,8 @@ const Footer =()=> {
                   </a>
               </div>
               <div className="p-2">
-                  <a href="https://www.linkedin.com/in/rileymanda/" target="_blank" rel="noopener noreferrer">
-                      <FaLinkedin style={{ color: 'white' }} />
+                  <a href="https://medium.com/@rileymanda" target="_blank" rel="noopener noreferrer">
+                      <FaMedium style={{ color: 'white' }} />
                   </a>
               </div>
 
@@ -26,11 +31,7 @@ const Footer =()=> {
                       <FaTwitter style={{ color: 'white' }} />
                   </a>
               </div>
-              <div className="p-2">
-                  <a href="https://medium.com/@rileymanda" target="_blank" rel="noopener noreferrer">
-                      <FaMedium style={{ color: 'white' }} />
-                  </a>
-              </div>
+
 
 
           </Stack>
