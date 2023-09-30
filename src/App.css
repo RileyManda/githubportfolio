@@ -4,6 +4,8 @@
   --nav-link-active: #ffa000;
   --white-font-color: #fff;
   --bg-app-color: #fff;
+  --arrow-bg-color: #fff;
+  --arrow-color: #ffa000;
 
   /* timeline psudo values */
 
@@ -126,15 +128,6 @@
   right: -2px;
 }
 
-/* .contact-container {
-  margin: 6px 0;
-  margin-bottom: 10px;
-  background: var(--metallic-bg-gradient);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .contact-container {
   display: flex;
   justify-content: center;
@@ -159,6 +152,8 @@
 
 .hero-arrow {
   cursor: pointer;
+  background: var(--arrow-bg-color);
+  color: var(--arrow-color);
 }
 
 @keyframes floatArrow {
