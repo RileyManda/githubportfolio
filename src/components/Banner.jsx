@@ -6,10 +6,8 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Carousel from 'react-bootstrap/Carousel';
 import Badge from 'react-bootstrap/Badge';
-import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
 import { BsFillCaretDownSquareFill } from 'react-icons/bs';
-
 import { ProgrammingIcons, FrontendIcons, BackendIcons, EditorIcons } from './Icons';
 import { orangeIconStyles, blueIconStyles, purpleIconStyles, redIconStyles } from './IconColor';
 import introductionData from './IntroductionData';
@@ -43,11 +41,6 @@ const Banner = () => {
             <Carousel.Item key={index} data-bs-theme="light">
               <Row className="align-items-center text-center">
                 <Col sm={12} lg={6} className="carousel-item-content d-flex justify-content-center">
-                  <Card style={{
-                    border: 'none',
-                    height: '90vh',
-                  }} className="stack-layout-container">
-
                     <Stack gap={3} direction="vertical" className='stack-layout'>
                       <h1>{project.title}</h1>
                       <p>{project.description}</p>
@@ -85,17 +78,13 @@ const Banner = () => {
                         ))}
                       </Stack>
                     </Stack>
-                  </Card>
                 </Col>
                 <Col sm={12} lg={6} className="carousel-item-content d-flex justify-content-center">
-                  <Card style={{
-                    border: 'none',
-                    height: '90vh',
-                  }} className="anim-layout-container">
+
                     <Stack direction="vertical" className='anim-layout'>
                         {AnimData[currentAnimData % AnimData.length]()}
                     </Stack>
-                  </Card>
+
                 </Col>
               </Row>
             </Carousel.Item>

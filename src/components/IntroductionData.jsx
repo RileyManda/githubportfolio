@@ -1,11 +1,11 @@
 const introductionData = [
     {
         title: 'Hello I am Riley',
-        description: 'A Full Stack Software Engineer',
+        description: 'I am A Full Stack Software Engineer',
     },
     {
         title: 'My Tech Stacks',
-        description: 'PERN,Ruby,Rails,and Flutter',
+        description: 'Reactjs,Postgresql,Ruby,Rails,and Flutter',
     },
     {
         title: 'I have',
