@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 
 function App() {
   const [searchKeyword, setSearchKeyword] = useState('');
-
   // Create refs for the sections
   const homeRef = useRef(null);
   const projectsRef = useRef(null);

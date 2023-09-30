@@ -5,22 +5,22 @@
   --white-font-color: #fff;
   --bg-app-color: #fff;
   --arrow-bg-color: #313e56;
-  --arrow-color: #f8f8f8;
+  --arrow-color: #ffa000;
 
   /* timeline psudo values */
-
   --year-font-size: 2px;
-  --year-text-color: #aa3232;
-  --timeline-item-bg-color: #f1f1f1;
+  --year-text-color: #9b3838;
+  --timeline-item-bg-color: #f7f5f5;
   --timeline-item-text-color: inherit;
   --timeline-item-font-size: 12px;
-  --timeline-item-padding: 4px 8px;
+  --timeline-item-padding: 6px 8px;
   --timeline-item-border-radius: 4px;
   --section-title-font-color: #ffa000;
 
   /* New metallic and robotic-themed variables */
-  --metallic-bg-gradient: linear-gradient(135deg, #363c48, #1c2331);
+  --metallic-bg-gradient: linear-gradient(135deg, #363c48, #212734);
   --robotic-font-family: 'Roboto', sans-serif;
+  --banner-gradient: linear-gradient(90deg, rgb(2, 0, 36) 30%, rgba(54, 60, 72, 0.6545211834733893) 50%, #2e3a51 100%);
 }
 
 .app-container {
@@ -55,27 +55,51 @@
 /* banner */
 
 .banner-container {
-  margin: 6px 6px;
   height: 90vh;
-  margin-bottom: 6px;
+  margin-top: 0;
+  width: 100%;
+  background: var(--metallic-bg-gradient);
 }
 
 .carousel-item-content {
   padding: 0 12px;
 }
 
-/* .carousel-card-l {
+.anim-layout-container {
+  position: relative;
   height: 90vh;
+  overflow: hidden;
+  background: var(--metallic-bg-gradient);
+  width: 50%;
 }
 
-.carousel-card-r {
-  height: auto;
-} */
+.anim-layout {
+  margin-top: -20px;
+  align-items: center;
+}
+
+.stack-layout-container {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  background: var(--metallic-bg-gradient);
+  color: var(--white-font-color);
+  width: 50%;
+}
+
+.stack-layout {
+  margin-top: -80px;
+  align-items: center;
+  color: var(--white-font-color);
+  justify-content: center;
+  text-align: center;
+  margin-left: 80px;
+}
 
 /* projects */
 
 .project-container {
-  margin: 6px 0;
+  margin: 0;
   margin-bottom: 10px;
   background: var(--metallic-bg-gradient);
   display: flex;
@@ -150,7 +174,7 @@
 
 .hero-arrow-container {
   position: absolute;
-  bottom: 60px;
+  margin-top: -90px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -162,6 +186,7 @@
   cursor: pointer;
   background: var(--arrow-color);
   color: var(--arrow-bg-color);
+  border-radius: 50%;
 }
 
 @keyframes floatArrow {
