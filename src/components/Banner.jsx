@@ -10,23 +10,19 @@ import Card from 'react-bootstrap/Card';
 import Stack from 'react-bootstrap/Stack';
 import { BsFillCaretDownSquareFill } from 'react-icons/bs';
 
-// import Loader from './Loader';
 import { ProgrammingIcons, FrontendIcons, BackendIcons, EditorIcons } from './Icons';
 import { orangeIconStyles, blueIconStyles, purpleIconStyles, redIconStyles } from './IconColor';
-// import Summary from './Summary';
 import introductionData from './IntroductionData';
 import AnimData from './AnimData';
 
-
 const Banner = () => {
-  // const isLoading = useSelector(state => state.home.isLoading);
   const dispatch = useDispatch();
   const [currentAnimData, setCurrentAnimData] = useState(0);
-
 
   useMemo(() => {
     dispatch(fetchProjects());
   }, [dispatch]);
+
   const handleSlide = (selectedIndex) => {
     setCurrentAnimData(selectedIndex);
   };
@@ -39,22 +35,22 @@ const Banner = () => {
     }
   };
 
-
   return (
     <div className="banner-container">
       <Container fluid>
         <Carousel data-bs-theme="dark" activeIndex={currentAnimData} onSelect={handleSlide}>
           {introductionData.map((project, index) => (
             <Carousel.Item key={index} data-bs-theme="light">
-              <Row className="justify-content-center align-items-center text-center">
+              <Row className="align-items-center text-center">
                 <Col sm={12} lg={6} className="carousel-item-content d-flex justify-content-center">
                   <Card style={{
                     border: 'none',
                     height: '90vh',
-                  }} className="carousel-card-l">
-                    <h1>{project.title}</h1>
-                    <p>{project.description}</p>
-                    <Stack gap={3} direction="vertical">
+                  }} className="stack-layout-container">
+
+                    <Stack gap={3} direction="vertical" className='stack-layout'>
+                      <h1>{project.title}</h1>
+                      <p>{project.description}</p>
                       <Stack direction="horizontal" gap={3}>
                         <Badge pill bg="dark">Front-end</Badge>
                         {FrontendIcons.map((icon, index) => (
@@ -95,27 +91,24 @@ const Banner = () => {
                   <Card style={{
                     border: 'none',
                     height: '90vh',
-                  }} className="carousel-card-r">
-                    <Stack direction="vertical">
-                      {AnimData[currentAnimData % AnimData.length].map((AnimComponent, index) => (
-                        <AnimComponent key={index} />
-                      ))}
+                  }} className="anim-layout-container">
+                    <Stack direction="vertical" className='anim-layout'>
+                        {AnimData[currentAnimData % AnimData.length]()}
                     </Stack>
                   </Card>
                 </Col>
-
               </Row>
             </Carousel.Item>
           ))}
         </Carousel>
-        <div className="hero-arrow-container" >
+        <div className="hero-arrow-container">
           <div className="hero-arrow" onClick={handleArrowClick}>
             <BsFillCaretDownSquareFill size={30} />
           </div>
         </div>
       </Container>
-
     </div>
   );
 };
+
 export default Banner;

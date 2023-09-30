@@ -8,7 +8,6 @@
   --arrow-color: #f8f8f8;
 
   /* timeline psudo values */
-
   --year-font-size: 2px;
   --year-text-color: #aa3232;
   --timeline-item-bg-color: #f1f1f1;
@@ -55,27 +54,46 @@
 /* banner */
 
 .banner-container {
-  margin: 6px 6px;
   height: 90vh;
-  margin-bottom: 6px;
+  margin-top: 0;
+  width: 100%;
+  background: var(--metallic-bg-gradient);
 }
 
 .carousel-item-content {
   padding: 0 12px;
 }
 
-/* .carousel-card-l {
+.anim-layout-container {
+  position: relative;
   height: 90vh;
+  overflow: hidden;
+  background: var(--metallic-bg-gradient);
+  width: 100%;
 }
 
-.carousel-card-r {
-  height: auto;
-} */
+.anim-layout {
+  margin-top: -80px;
+}
+
+.stack-layout-container {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  background: var(--metallic-bg-gradient);
+  width: 100%;
+  color: var(--white-font-color);
+}
+
+.stack-layout {
+  margin-top: 30px;
+  align-items: center;
+}
 
 /* projects */
 
 .project-container {
-  margin: 6px 0;
+  margin: 0;
   margin-bottom: 10px;
   background: var(--metallic-bg-gradient);
   display: flex;
