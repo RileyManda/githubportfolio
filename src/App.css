@@ -4,8 +4,8 @@
   --nav-link-active: #ffa000;
   --white-font-color: #fff;
   --bg-app-color: #fff;
-  --arrow-bg-color: #fff;
-  --arrow-color: #ffa000;
+  --arrow-bg-color: #313e56;
+  --arrow-color: #f8f8f8;
 
   /* timeline psudo values */
 
@@ -152,8 +152,8 @@
 
 .hero-arrow {
   cursor: pointer;
-  background: var(--arrow-bg-color);
-  color: var(--arrow-color);
+  background: var(--arrow-color);
+  color: var(--arrow-bg-color);
 }
 
 @keyframes floatArrow {
@@ -162,7 +162,7 @@
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
 
   100% {
