@@ -1,4 +1,4 @@
-import { useMemo,useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchProjects } from '../redux/projects/projectSlice';
 import Container from 'react-bootstrap/Container';
@@ -46,12 +46,12 @@ const Banner = () => {
         <Carousel data-bs-theme="dark" activeIndex={currentAnimData} onSelect={handleSlide}>
           {introductionData.map((project, index) => (
             <Carousel.Item key={index} data-bs-theme="light">
-              <Row className= "justify-content-center align-items-center text-center">
+              <Row className="justify-content-center align-items-center text-center">
                 <Col sm={12} lg={6} className="carousel-item-content d-flex justify-content-center">
                   <Card style={{
                     border: 'none',
                     height: '90vh',
-                  }}>
+                  }} className="carousel-card-l">
                     <h1>{project.title}</h1>
                     <p>{project.description}</p>
                     <Stack gap={3} direction="vertical">
@@ -95,14 +95,12 @@ const Banner = () => {
                   <Card style={{
                     border: 'none',
                     height: '90vh',
-                  }}>
+                  }} className="carousel-card-r">
                     <Stack direction="vertical">
                       {AnimData[currentAnimData % AnimData.length].map((AnimComponent, index) => (
                         <AnimComponent key={index} />
                       ))}
                     </Stack>
-
-
                   </Card>
                 </Col>
 
@@ -111,13 +109,13 @@ const Banner = () => {
           ))}
         </Carousel>
         <div className="hero-arrow-container" >
-         <div className="hero-arrow" onClick={handleArrowClick}>
-            <BsFillCaretDownSquareFill size={24} />
+          <div className="hero-arrow" onClick={handleArrowClick}>
+            <BsFillCaretDownSquareFill size={30} />
           </div>
         </div>
       </Container>
 
-      </div>
+    </div>
   );
 };
 export default Banner;

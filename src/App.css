@@ -4,6 +4,8 @@
   --nav-link-active: #ffa000;
   --white-font-color: #fff;
   --bg-app-color: #fff;
+  --arrow-bg-color: #313e56;
+  --arrow-color: #f8f8f8;
 
   /* timeline psudo values */
 
@@ -61,6 +63,14 @@
 .carousel-item-content {
   padding: 0 12px;
 }
+
+/* .carousel-card-l {
+  height: 90vh;
+}
+
+.carousel-card-r {
+  height: auto;
+} */
 
 /* projects */
 
@@ -126,15 +136,6 @@
   right: -2px;
 }
 
-/* .contact-container {
-  margin: 6px 0;
-  margin-bottom: 10px;
-  background: var(--metallic-bg-gradient);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .contact-container {
   display: flex;
   justify-content: center;
@@ -159,6 +160,8 @@
 
 .hero-arrow {
   cursor: pointer;
+  background: var(--arrow-color);
+  color: var(--arrow-bg-color);
 }
 
 @keyframes floatArrow {
@@ -167,7 +170,7 @@
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px);
   }
 
   100% {
