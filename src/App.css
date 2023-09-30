@@ -88,9 +88,12 @@
 }
 
 .stack-layout {
-  margin-top: -20px;
+  margin-top: -80px;
   align-items: center;
   color: var(--white-font-color);
+  justify-content: center;
+  text-align: center;
+  margin-left: 80px;
 }
 
 /* projects */

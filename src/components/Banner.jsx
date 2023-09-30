@@ -40,8 +40,9 @@ const Banner = () => {
           {introductionData.map((project, index) => (
             <Carousel.Item key={index} data-bs-theme="light">
               <Row className="align-items-center text-center">
-                <Col sm={12} lg={6} className="carousel-item-content d-flex justify-content-center">
-                    <Stack gap={3} direction="vertical" className='stack-layout'>
+                <Col sm={12} lg={6} className="carousel-item-content d-flex justify-content-center
+                ">
+                  <Stack gap={3} direction="vertical" className='stack-layout'>
                       <h1>{project.title}</h1>
                       <p>{project.description}</p>
                       <Stack direction="horizontal" gap={3}>
@@ -60,7 +61,6 @@ const Banner = () => {
                           </div>
                         ))}
                       </Stack>
-
                       <Stack direction="horizontal" gap={3}>
                         <Badge pill bg="dark">Back-end</Badge>
                         {BackendIcons.map((icon, index) => (
