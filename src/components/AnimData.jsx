@@ -6,10 +6,10 @@ import Anim4 from './Anim4.jsx';
 
 
 const AnimData = [
-  [Anim1],
-  [Anim2],
-  [Anim3],
-  [Anim4],
+  Anim1,
+  Anim2,
+  Anim3,
+  Anim4,
 
 ];
 

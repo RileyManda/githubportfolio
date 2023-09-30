@@ -176,7 +176,7 @@ To run the project, execute the following command:
 
 
 ```sh
-  npm start
+  npm run dev
 ```
 
 
@@ -221,9 +221,9 @@ You can deploy this project using:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
->Mobile Version
+> Mobile Version
 
->Implement Media Queries For Mobile Responsiveness
+> Implement Media Queries For Mobile Responsiveness
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
