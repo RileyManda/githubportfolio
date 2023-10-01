@@ -9,4 +9,10 @@ describe('Footer', () => {
     const { container } = (<Footer />);
     expect(container).toMatchSnapshot();
   });
+    // should have url https://www.linkedin.com/in/rileymanda/
+    test('should render linkedin url', () => {
+        const { getByTestId } = render(<Footer />);
+        const linkedinLink = getByTestId('linkedin');
+        expect(linkedinLink).toHaveAttribute('href', 'https://www.linkedin.com/in/rileymanda/');
+    });
 });
