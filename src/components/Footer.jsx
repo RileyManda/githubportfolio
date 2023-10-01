@@ -3,10 +3,11 @@ import Stack from 'react-bootstrap/Stack';
 
 const Footer =()=> {
   return (
-      <div>  <footer className="footer">
+      <div>
+      <footer className="footer" id='footer'>
           <Stack direction="horizontal" gap={3}>
               <div className="p-2">
-                  <a href="https://www.linkedin.com/in/rileymanda/" target="_blank" rel="noopener noreferrer">
+                      <a data-testid="linkedin" href="https://www.linkedin.com/in/rileymanda/" target="_blank" rel="noopener noreferrer">
                       <FaLinkedin style={{ color: 'white' }} />
                   </a>
               </div>
@@ -36,6 +37,7 @@ const Footer =()=> {
 
           </Stack>
           <p>Lets Connect and build some amazing projects</p>
+          <p data-testid="copyright">© 2021 by RleyManda</p>
       </footer>
       </div>
   )
