@@ -31,6 +31,9 @@ const Projects = ({ setSearchKeyword, searchKeyword }) => {
   const projectsWithTopics = projects.filter(project =>
     project.topics && project.topics.length > 0 && project.name.toLowerCase().includes(searchKeyword.toLowerCase()));
 
+  // Sort projects by updated_at in descending order
+  projectsWithTopics.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+
   const formatDate = (date) => {
     return format(new Date(date), 'MMM yyyy');
   };
