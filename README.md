@@ -39,7 +39,7 @@
 
 # 📖 RileysPortfolio <a name="about-project"></a>
 
-This is my personal portfolio project, meticulously crafted to be a reflection of my skills, achievements, and passion for web development. Here, you'll find a curated selection of my projects, each showcasing my expertise and dedication to creating innovative and user-friendly web applications. Explore my portfolio to get a glimpse of my journey as a Full Stack developer and discover the exciting projects I've had the privilege to work on.
+This is my work in progress personal portfolio project, meticulously crafted to be a reflection of my skills, achievements, and passion for web development. Here, you'll find a curated selection of my projects, each showcasing my expertise and dedication to creating innovative and user-friendly web applications. Explore my portfolio to get a glimpse of my journey as a Full Stack developer and discover the exciting projects I've had the privilege to work on.
 
  <!-- <img src="app-screenshot.png" alt="logo" width="140"  height="auto" />
   <img src="detail-screenshot.png" alt="logo" width="140"  height="auto" /> -->
