@@ -39,8 +39,7 @@
 
 # 📖 RileysPortfolio <a name="about-project"></a>
 
-This is my work in progress personal portfolio project, meticulously crafted to be a reflection of my skills, achievements, and passion for web development. Here, you'll find a curated selection of my projects, each showcasing my expertise and dedication to creating innovative and user-friendly web applications. Explore my portfolio to get a glimpse of my journey as a Full Stack developer and discover the exciting projects I've had the privilege to work on.
-
+A Work In Progress github portfolio project built with react+vite, meticulously crafted to display public repositories from my github account utilizing the github Api.
  <!-- <img src="app-screenshot.png" alt="logo" width="140"  height="auto" />
   <img src="detail-screenshot.png" alt="logo" width="140"  height="auto" /> -->
 
